@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WarehousesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Customers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" />
+    <Property Name="Image" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Dismissal Permission">
+    <Key>
+      <PropertyRef Name="Dis_Id" />
+      <PropertyRef Name="Dis_prd" />
+    </Key>
+    <Property Name="Dis_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Dis_prd" Type="int" Nullable="false" />
+    <Property Name="Dis_Warhouse" Type="int" />
+    <Property Name="Dis_PrdQuantity" Type="int" />
+    <Property Name="Dis_Supplier" Type="int" />
+  </EntityType>
+  <EntityType Name="Mangers">
+    <Key>
+      <PropertyRef Name="Mng_Id" />
+    </Key>
+    <Property Name="Mng_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Mng_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Mng_Address" Type="nvarchar" MaxLength="50" />
+    <Property Name="Mng_Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Mng_Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Mng_Warhouse" Type="int" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="Prd_ID" />
+    </Key>
+    <Property Name="Prd_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Prd_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Prd_Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="Prd_Unit" Type="nvarchar" MaxLength="50" />
+    <Property Name="Prd_Price" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Prd_ProductionDate" Type="date" />
+    <Property Name="Prd_ExpireDate" Type="date" />
+    <Property Name="Prd_Supplier" Type="int" />
+    <Property Name="Prd_Image" Type="nvarchar(max)" />
+    <Property Name="Prd_Quantity" Type="int" />
+    <Property Name="Prd_Warhouse" Type="int" />
+  </EntityType>
+  <EntityType Name="Suppliers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" />
+    <Property Name="Image" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Supply Permissions">
+    <Key>
+      <PropertyRef Name="Spl_Id" />
+      <PropertyRef Name="Spl_prd" />
+    </Key>
+    <Property Name="Spl_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Spl_prd" Type="int" Nullable="false" />
+    <Property Name="Spl_Warhouse" Type="int" />
+    <Property Name="Spl_Date" Type="date" />
+    <Property Name="Spl_PrdQuantity" Type="int" />
+    <Property Name="Spl_Supplier" Type="int" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+    <Property Name="Image" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Warhouses">
+    <Key>
+      <PropertyRef Name="Wrh_Id" />
+    </Key>
+    <Property Name="Wrh_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Wrh_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Wrh_Address" Type="nvarchar" MaxLength="50" />
+    <Property Name="Wrs_Fax" Type="nvarchar" MaxLength="50" />
+    <Property Name="Wrs_Phone" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_Dismissal Permission_Products">
+    <End Role="Products" Type="Self.Products" Multiplicity="1" />
+    <End Role="Dismissal Permission" Type="Self.Dismissal Permission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="Prd_ID" />
+      </Principal>
+      <Dependent Role="Dismissal Permission">
+        <PropertyRef Name="Dis_prd" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Dismissal Permission_Suppliers">
+    <End Role="Suppliers" Type="Self.Suppliers" Multiplicity="0..1" />
+    <End Role="Dismissal Permission" Type="Self.Dismissal Permission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Suppliers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Dismissal Permission">
+        <PropertyRef Name="Dis_Supplier" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Dismissal Permission_Warhouses">
+    <End Role="Warhouses" Type="Self.Warhouses" Multiplicity="0..1" />
+    <End Role="Dismissal Permission" Type="Self.Dismissal Permission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Warhouses">
+        <PropertyRef Name="Wrh_Id" />
+      </Principal>
+      <Dependent Role="Dismissal Permission">
+        <PropertyRef Name="Dis_Warhouse" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Mangers_Warhouses">
+    <End Role="Warhouses" Type="Self.Warhouses" Multiplicity="0..1" />
+    <End Role="Mangers" Type="Self.Mangers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Warhouses">
+        <PropertyRef Name="Wrh_Id" />
+      </Principal>
+      <Dependent Role="Mangers">
+        <PropertyRef Name="Mng_Warhouse" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Supply Permissions_Products">
+    <End Role="Products" Type="Self.Products" Multiplicity="1" />
+    <End Role="Supply Permissions" Type="Self.Supply Permissions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="Prd_ID" />
+      </Principal>
+      <Dependent Role="Supply Permissions">
+        <PropertyRef Name="Spl_prd" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Supply Permissions_Suppliers">
+    <End Role="Suppliers" Type="Self.Suppliers" Multiplicity="0..1" />
+    <End Role="Supply Permissions" Type="Self.Supply Permissions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Suppliers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Supply Permissions">
+        <PropertyRef Name="Spl_Supplier" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Supply Permissions_Warhouses">
+    <End Role="Warhouses" Type="Self.Warhouses" Multiplicity="0..1" />
+    <End Role="Supply Permissions" Type="Self.Supply Permissions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Warhouses">
+        <PropertyRef Name="Wrh_Id" />
+      </Principal>
+      <Dependent Role="Supply Permissions">
+        <PropertyRef Name="Spl_Warhouse" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="WarehousesModelStoreContainer">
+    <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Dismissal Permission" EntityType="Self.Dismissal Permission" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mangers" EntityType="Self.Mangers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Suppliers" EntityType="Self.Suppliers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Supply Permissions" EntityType="Self.Supply Permissions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Warhouses" EntityType="Self.Warhouses" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Dismissal Permission_Products" Association="Self.FK_Dismissal Permission_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="Dismissal Permission" EntitySet="Dismissal Permission" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Dismissal Permission_Suppliers" Association="Self.FK_Dismissal Permission_Suppliers">
+      <End Role="Suppliers" EntitySet="Suppliers" />
+      <End Role="Dismissal Permission" EntitySet="Dismissal Permission" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Dismissal Permission_Warhouses" Association="Self.FK_Dismissal Permission_Warhouses">
+      <End Role="Warhouses" EntitySet="Warhouses" />
+      <End Role="Dismissal Permission" EntitySet="Dismissal Permission" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Mangers_Warhouses" Association="Self.FK_Mangers_Warhouses">
+      <End Role="Warhouses" EntitySet="Warhouses" />
+      <End Role="Mangers" EntitySet="Mangers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Supply Permissions_Products" Association="Self.FK_Supply Permissions_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="Supply Permissions" EntitySet="Supply Permissions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Supply Permissions_Suppliers" Association="Self.FK_Supply Permissions_Suppliers">
+      <End Role="Suppliers" EntitySet="Suppliers" />
+      <End Role="Supply Permissions" EntitySet="Supply Permissions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Supply Permissions_Warhouses" Association="Self.FK_Supply Permissions_Warhouses">
+      <End Role="Warhouses" EntitySet="Warhouses" />
+      <End Role="Supply Permissions" EntitySet="Supply Permissions" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

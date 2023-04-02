@@ -1,0 +1,20 @@
+F:\iti\Projects\EF-Project\Warehouse Management System\bin\Debug\Warehouse Management System.exe.config
+F:\iti\Projects\EF-Project\Warehouse Management System\bin\Debug\Warehouse Management System.exe
+F:\iti\Projects\EF-Project\Warehouse Management System\bin\Debug\Warehouse Management System.pdb
+F:\iti\Projects\EF-Project\Warehouse Management System\obj\Debug\Warehouse Management System.csproj.AssemblyReference.cache
+F:\iti\Projects\EF-Project\Warehouse Management System\obj\Debug\Warehouse Management System.csproj.SuggestedBindingRedirects.cache
+F:\iti\Projects\EF-Project\Warehouse Management System\obj\Debug\Warehouse_Management_System.Properties.Resources.resources
+F:\iti\Projects\EF-Project\Warehouse Management System\obj\Debug\Warehouse Management System.csproj.GenerateResource.cache
+F:\iti\Projects\EF-Project\Warehouse Management System\obj\Debug\Warehouse Management System.csproj.CoreCompileInputs.cache
+F:\iti\Projects\EF-Project\Warehouse Management System\obj\Debug\Warehouse Management System.exe
+F:\iti\Projects\EF-Project\Warehouse Management System\obj\Debug\Warehouse Management System.pdb
+F:\iti\Projects\EF-Project\Warehouse Management System\obj\Debug\Warehouse_Management_System.Screens.Users.NewUser.resources
+F:\iti\Projects\EF-Project\Warehouse Management System\bin\Debug\EntityFramework.dll
+F:\iti\Projects\EF-Project\Warehouse Management System\bin\Debug\EntityFramework.SqlServer.dll
+F:\iti\Projects\EF-Project\Warehouse Management System\bin\Debug\EntityFramework.xml
+F:\iti\Projects\EF-Project\Warehouse Management System\bin\Debug\EntityFramework.SqlServer.xml
+F:\iti\Projects\EF-Project\Warehouse Management System\obj\Debug\Warehouse_Management_System.Login.resources
+F:\iti\Projects\EF-Project\Warehouse Management System\obj\Debug\Warehouse Management System.csproj.CopyComplete
+F:\iti\Projects\EF-Project\Warehouse Management System\obj\Debug\Warehouse_Management_System.MainForm.resources
+F:\iti\Projects\EF-Project\Warehouse Management System\obj\Debug\Warehouse_Management_System.Screens.Mangers.Add_Manger.resources
+F:\iti\Projects\EF-Project\Warehouse Management System\obj\Debug\Warehouse_Management_System.Screens.Products.addProduct_SupplyPermission.resources
