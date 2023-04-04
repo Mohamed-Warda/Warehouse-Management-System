@@ -14,13 +14,19 @@ namespace Warehouse_Management_System.DataBase
     
     public partial class Manger
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Manger()
+        {
+            this.Warhouses = new HashSet<Warhous>();
+        }
+    
         public int Mng_Id { get; set; }
         public string Mng_Name { get; set; }
         public string Mng_Address { get; set; }
         public string Mng_Email { get; set; }
         public string Mng_Phone { get; set; }
-        public Nullable<int> Mng_Warhouse { get; set; }
     
-        public virtual Warhous Warhous { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Warhous> Warhouses { get; set; }
     }
 }

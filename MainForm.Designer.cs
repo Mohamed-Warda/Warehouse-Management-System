@@ -36,7 +36,6 @@
             this.addNewUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateDeleteUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addNewProductsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mangeProductsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changeProductLocationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.customersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -121,19 +120,12 @@
             // productsToolStripMenuItem
             // 
             this.productsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addNewProductsToolStripMenuItem,
             this.mangeProductsToolStripMenuItem,
             this.changeProductLocationToolStripMenuItem});
             this.productsToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.productsToolStripMenuItem.Name = "productsToolStripMenuItem";
             this.productsToolStripMenuItem.Size = new System.Drawing.Size(98, 27);
             this.productsToolStripMenuItem.Text = "Products";
-            // 
-            // addNewProductsToolStripMenuItem
-            // 
-            this.addNewProductsToolStripMenuItem.Name = "addNewProductsToolStripMenuItem";
-            this.addNewProductsToolStripMenuItem.Size = new System.Drawing.Size(308, 28);
-            this.addNewProductsToolStripMenuItem.Text = "Add New Products";
             // 
             // mangeProductsToolStripMenuItem
             // 
@@ -242,7 +234,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Warehouse_Management_System.Properties.Resources.background;
-            this.ClientSize = new System.Drawing.Size(1384, 494);
+            this.ClientSize = new System.Drawing.Size(1384, 678);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
@@ -264,7 +256,6 @@
         private System.Windows.Forms.ToolStripMenuItem addNewUserToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateDeleteUsersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem productsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addNewProductsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mangeProductsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem changeProductLocationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem customersToolStripMenuItem;

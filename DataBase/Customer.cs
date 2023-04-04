@@ -14,6 +14,12 @@ namespace Warehouse_Management_System.DataBase
     
     public partial class Customer
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Customer()
+        {
+            this.Dismissal_Permission = new HashSet<Dismissal_Permission>();
+        }
+    
         public int Id { get; set; }
         public string Name { get; set; }
         public string Fax { get; set; }
@@ -21,5 +27,8 @@ namespace Warehouse_Management_System.DataBase
         public string Email { get; set; }
         public string Address { get; set; }
         public string Image { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Dismissal_Permission> Dismissal_Permission { get; set; }
     }
 }

@@ -14,14 +14,19 @@ namespace Warehouse_Management_System.DataBase
     
     public partial class Dismissal_Permission
     {
-        public int Dis_Id { get; set; }
-        public int Dis_prd { get; set; }
-        public Nullable<int> Dis_Warhouse { get; set; }
-        public Nullable<int> Dis_PrdQuantity { get; set; }
-        public Nullable<int> Dis_Supplier { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Dismissal_Permission()
+        {
+            this.Dismissal_Prd = new HashSet<Dismissal_Prd>();
+        }
     
-        public virtual Product Product { get; set; }
-        public virtual Supplier Supplier { get; set; }
-        public virtual Warhous Warhous { get; set; }
+        public int Dis_Id { get; set; }
+        public System.DateTime Dis_CreaedAt { get; set; }
+        public Nullable<int> Dis_Warhouse { get; set; }
+        public Nullable<int> Dis_Custmer { get; set; }
+    
+        public virtual Customer Customer { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Dismissal_Prd> Dismissal_Prd { get; set; }
     }
 }

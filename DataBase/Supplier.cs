@@ -17,7 +17,6 @@ namespace Warehouse_Management_System.DataBase
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Supplier()
         {
-            this.Dismissal_Permission = new HashSet<Dismissal_Permission>();
             this.Supply_Permissions = new HashSet<Supply_Permission>();
         }
     
@@ -29,8 +28,6 @@ namespace Warehouse_Management_System.DataBase
         public string Address { get; set; }
         public string Image { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Dismissal_Permission> Dismissal_Permission { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Supply_Permission> Supply_Permissions { get; set; }
     }

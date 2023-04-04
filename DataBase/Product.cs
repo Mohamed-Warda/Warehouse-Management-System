@@ -17,25 +17,25 @@ namespace Warehouse_Management_System.DataBase
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Product()
         {
-            this.Dismissal_Permission = new HashSet<Dismissal_Permission>();
-            this.Supply_Permissions = new HashSet<Supply_Permission>();
+            this.Dismissal_Prd = new HashSet<Dismissal_Prd>();
+            this.SupplyPrm_Prds = new HashSet<SupplyPrm_Prds>();
         }
     
-        public int Prd_ID { get; set; }
+        public int Prd_Code { get; set; }
         public string Prd_Name { get; set; }
-        public string Prd_Code { get; set; }
         public string Prd_Unit { get; set; }
         public Nullable<decimal> Prd_Price { get; set; }
         public Nullable<System.DateTime> Prd_ProductionDate { get; set; }
         public Nullable<System.DateTime> Prd_ExpireDate { get; set; }
-        public Nullable<int> Prd_Supplier { get; set; }
         public string Prd_Image { get; set; }
         public Nullable<int> Prd_Quantity { get; set; }
         public Nullable<int> Prd_Warhouse { get; set; }
+        public int Prd_Id { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Dismissal_Permission> Dismissal_Permission { get; set; }
+        public virtual ICollection<Dismissal_Prd> Dismissal_Prd { get; set; }
+        public virtual Warhous Warhous { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Supply_Permission> Supply_Permissions { get; set; }
+        public virtual ICollection<SupplyPrm_Prds> SupplyPrm_Prds { get; set; }
     }
 }

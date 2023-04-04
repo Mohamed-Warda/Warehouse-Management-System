@@ -17,9 +17,7 @@ namespace Warehouse_Management_System.DataBase
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Warhous()
         {
-            this.Dismissal_Permission = new HashSet<Dismissal_Permission>();
-            this.Mangers = new HashSet<Manger>();
-            this.Supply_Permissions = new HashSet<Supply_Permission>();
+            this.Products = new HashSet<Product>();
         }
     
         public int Wrh_Id { get; set; }
@@ -27,12 +25,10 @@ namespace Warehouse_Management_System.DataBase
         public string Wrh_Address { get; set; }
         public string Wrs_Fax { get; set; }
         public string Wrs_Phone { get; set; }
+        public Nullable<int> Wrs_Mng { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Dismissal_Permission> Dismissal_Permission { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Manger> Mangers { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Supply_Permission> Supply_Permissions { get; set; }
+        public virtual ICollection<Product> Products { get; set; }
+        public virtual Manger Manger { get; set; }
     }
 }

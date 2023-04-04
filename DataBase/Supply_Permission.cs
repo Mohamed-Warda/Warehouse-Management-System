@@ -14,15 +14,19 @@ namespace Warehouse_Management_System.DataBase
     
     public partial class Supply_Permission
     {
-        public int Spl_Id { get; set; }
-        public int Spl_prd { get; set; }
-        public Nullable<int> Spl_Warhouse { get; set; }
-        public Nullable<System.DateTime> Spl_Date { get; set; }
-        public Nullable<int> Spl_PrdQuantity { get; set; }
-        public Nullable<int> Spl_Supplier { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Supply_Permission()
+        {
+            this.SupplyPrm_Prds = new HashSet<SupplyPrm_Prds>();
+        }
     
-        public virtual Product Product { get; set; }
+        public int Spl_Id { get; set; }
+        public Nullable<int> Spl_Warhouse { get; set; }
+        public Nullable<int> Spl_Supplier { get; set; }
+        public Nullable<System.DateTime> Spl_CreatedAt { get; set; }
+    
         public virtual Supplier Supplier { get; set; }
-        public virtual Warhous Warhous { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SupplyPrm_Prds> SupplyPrm_Prds { get; set; }
     }
 }

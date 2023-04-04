@@ -63,6 +63,11 @@ namespace Warehouse_Management_System
             Add_Manger frm = new Add_Manger();
             frm.Show();
         }
+
+        private void addNewProductsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 

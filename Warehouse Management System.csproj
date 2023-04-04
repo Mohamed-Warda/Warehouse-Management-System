@@ -61,6 +61,9 @@
     <Compile Include="DataBase\Dismissal_Permission.cs">
       <DependentUpon>ModelEF.tt</DependentUpon>
     </Compile>
+    <Compile Include="DataBase\Dismissal_Prd.cs">
+      <DependentUpon>ModelEF.tt</DependentUpon>
+    </Compile>
     <Compile Include="DataBase\Manger.cs">
       <DependentUpon>ModelEF.tt</DependentUpon>
     </Compile>
@@ -83,6 +86,9 @@
       <DependentUpon>ModelEF.tt</DependentUpon>
     </Compile>
     <Compile Include="DataBase\Supplier.cs">
+      <DependentUpon>ModelEF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\SupplyPrm_Prds.cs">
       <DependentUpon>ModelEF.tt</DependentUpon>
     </Compile>
     <Compile Include="DataBase\Supply_Permission.cs">
@@ -114,11 +120,17 @@
     <Compile Include="Screens\Mangers\Add_Manger.Designer.cs">
       <DependentUpon>Add_Manger.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Products\addProduct_SupplyPermission.cs">
+    <Compile Include="Screens\Products\AddNewPrd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Products\addProduct_SupplyPermission.Designer.cs">
-      <DependentUpon>addProduct_SupplyPermission.cs</DependentUpon>
+    <Compile Include="Screens\Products\AddNewPrd.Designer.cs">
+      <DependentUpon>AddNewPrd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Products\SupplyPermission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Products\SupplyPermission.Designer.cs">
+      <DependentUpon>SupplyPermission.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\Users\NewUser.cs">
       <SubType>Form</SubType>
@@ -145,8 +157,11 @@
     <EmbeddedResource Include="Screens\Mangers\Add_Manger.resx">
       <DependentUpon>Add_Manger.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Products\addProduct_SupplyPermission.resx">
-      <DependentUpon>addProduct_SupplyPermission.cs</DependentUpon>
+    <EmbeddedResource Include="Screens\Products\AddNewPrd.resx">
+      <DependentUpon>AddNewPrd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Products\SupplyPermission.resx">
+      <DependentUpon>SupplyPermission.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Users\NewUser.resx">
       <DependentUpon>NewUser.cs</DependentUpon>
