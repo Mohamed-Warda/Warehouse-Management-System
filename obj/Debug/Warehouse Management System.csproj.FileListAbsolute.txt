@@ -40,3 +40,4 @@ F:\iti\Projects\EF-Project\Warehouse-Management-System\obj\Debug\Warehouse Manag
 F:\iti\Projects\EF-Project\Warehouse-Management-System\obj\Debug\Warehouse_Management_System.Screens.Products.SupplyPermission.resources
 F:\iti\Projects\EF-Project\Warehouse-Management-System\obj\Debug\Warehouse_Management_System.Screens.Products.AddNewPrd.resources
 F:\iti\Projects\EF-Project\Warehouse-Management-System\obj\Debug\Warehouse_Management_System.Screens.Warhouses.WarhouseForm.resources
+F:\iti\Projects\EF-Project\Warehouse-Management-System\obj\Debug\Warehouse_Management_System.Screens.Suppliers.SuppliersForm.resources

@@ -132,6 +132,12 @@
     <Compile Include="Screens\Products\SupplyPermission.Designer.cs">
       <DependentUpon>SupplyPermission.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\Suppliers\SuppliersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Suppliers\SuppliersForm.Designer.cs">
+      <DependentUpon>SuppliersForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\Users\NewUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Products\SupplyPermission.resx">
       <DependentUpon>SupplyPermission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Suppliers\SuppliersForm.resx">
+      <DependentUpon>SuppliersForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Users\NewUser.resx">
       <DependentUpon>NewUser.cs</DependentUpon>

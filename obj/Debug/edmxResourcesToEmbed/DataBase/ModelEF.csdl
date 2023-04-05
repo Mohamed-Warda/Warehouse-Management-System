@@ -71,7 +71,6 @@
     <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Supply_Permissions" Relationship="Self.FK_Supply_Permissions_Suppliers" FromRole="Suppliers" ToRole="Supply_Permissions" />
   </EntityType>
   <EntityType Name="Supply_Permission">
