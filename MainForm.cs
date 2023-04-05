@@ -9,7 +9,9 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Warehouse_Management_System.Screens.Mangers;
+using Warehouse_Management_System.Screens.Products;
 using Warehouse_Management_System.Screens.Users;
+using Warehouse_Management_System.Screens.Warhouses;
 
 namespace Warehouse_Management_System
 {
@@ -67,6 +69,28 @@ namespace Warehouse_Management_System
         private void addNewProductsToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSP_Click(object sender, EventArgs e)
+        {
+            SupplyPermission frm = new SupplyPermission();
+            frm.Show();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            WarhouseForm frm = new WarhouseForm();
+            frm.Show();
         }
     }
     }

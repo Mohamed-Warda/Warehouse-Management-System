@@ -33,7 +33,6 @@
     <Property Name="Diss_Id" Type="Int32" Nullable="false" />
     <Property Name="Diss_PrdQ" Type="Int32" />
     <NavigationProperty Name="Dismissal_Permission" Relationship="Self.FK_Dismissal_Prd_Dismissal_Permission" FromRole="Dismissal_Prd" ToRole="Dismissal_Permission" />
-    <NavigationProperty Name="Product" Relationship="Self.FK_Dismissal_Prd_Products" FromRole="Dismissal_Prd" ToRole="Products" />
   </EntityType>
   <EntityType Name="Manger">
     <Key>
@@ -44,12 +43,13 @@
     <Property Name="Mng_Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Mng_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Mng_Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Warhouses" Relationship="Self.Manger_Warhouses" FromRole="Mangers" ToRole="Warhouses" />
+    <NavigationProperty Name="Warhouses" Relationship="Self.FK_Warhouses_Mangers" FromRole="Mangers" ToRole="Warhouses" />
   </EntityType>
   <EntityType Name="Product">
     <Key>
       <PropertyRef Name="Prd_Id" />
     </Key>
+    <Property Name="Prd_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Prd_Code" Type="Int32" Nullable="false" />
     <Property Name="Prd_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Prd_Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -59,9 +59,6 @@
     <Property Name="Prd_Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="Prd_Quantity" Type="Int32" />
     <Property Name="Prd_Warhouse" Type="Int32" />
-    <Property Name="Prd_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <NavigationProperty Name="Dismissal_Prd" Relationship="Self.FK_Dismissal_Prd_Products" FromRole="Products" ToRole="Dismissal_Prd" />
-    <NavigationProperty Name="Warhous" Relationship="Self.FK_Products_Warhouses" FromRole="Products" ToRole="Warhouses" />
     <NavigationProperty Name="SupplyPrm_Prds" Relationship="Self.FK_SupplyPrm_Prds_Products" FromRole="Products" ToRole="SupplyPrm_Prds" />
   </EntityType>
   <EntityType Name="Supplier">
@@ -86,6 +83,7 @@
     <Property Name="Spl_Supplier" Type="Int32" />
     <Property Name="Spl_CreatedAt" Type="DateTime" Precision="0" />
     <NavigationProperty Name="Supplier" Relationship="Self.FK_Supply_Permissions_Suppliers" FromRole="Supply_Permissions" ToRole="Suppliers" />
+    <NavigationProperty Name="Warhous" Relationship="Self.FK_Supply_Permissions_Warhouses" FromRole="Supply_Permissions" ToRole="Warhouses" />
     <NavigationProperty Name="SupplyPrm_Prds" Relationship="Self.FK_SupplyPrm_Prds_Supply_Permissions" FromRole="Supply_Permissions" ToRole="SupplyPrm_Prds" />
   </EntityType>
   <EntityType Name="SupplyPrm_Prds">
@@ -118,8 +116,8 @@
     <Property Name="Wrs_Fax" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Wrs_Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Wrs_Mng" Type="Int32" />
-    <NavigationProperty Name="Products" Relationship="Self.FK_Products_Warhouses" FromRole="Warhouses" ToRole="Products" />
-    <NavigationProperty Name="Manger" Relationship="Self.Manger_Warhouses" FromRole="Warhouses" ToRole="Mangers" />
+    <NavigationProperty Name="Manger" Relationship="Self.FK_Warhouses_Mangers" FromRole="Warhouses" ToRole="Mangers" />
+    <NavigationProperty Name="Supply_Permissions" Relationship="Self.FK_Supply_Permissions_Warhouses" FromRole="Warhouses" ToRole="Supply_Permissions" />
   </EntityType>
   <Association Name="FK_Dismissal_Permission_Customers">
     <End Role="Customers" Type="Self.Customer" Multiplicity="0..1" />
@@ -145,27 +143,15 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Dismissal_Prd_Products">
-    <End Role="Products" Type="Self.Product" Multiplicity="1" />
-    <End Role="Dismissal_Prd" Type="Self.Dismissal_Prd" Multiplicity="*" />
+  <Association Name="FK_Warhouses_Mangers">
+    <End Role="Mangers" Type="Self.Manger" Multiplicity="0..1" />
+    <End Role="Warhouses" Type="Self.Warhous" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Products">
-        <PropertyRef Name="Prd_Id" />
+      <Principal Role="Mangers">
+        <PropertyRef Name="Mng_Id" />
       </Principal>
-      <Dependent Role="Dismissal_Prd">
-        <PropertyRef Name="Diss_Prd" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Products_Warhouses">
-    <End Role="Warhouses" Type="Self.Warhous" Multiplicity="0..1" />
-    <End Role="Products" Type="Self.Product" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Warhouses">
-        <PropertyRef Name="Wrh_Id" />
-      </Principal>
-      <Dependent Role="Products">
-        <PropertyRef Name="Prd_Warhouse" />
+      <Dependent Role="Warhouses">
+        <PropertyRef Name="Wrs_Mng" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -193,6 +179,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_Supply_Permissions_Warhouses">
+    <End Role="Warhouses" Type="Self.Warhous" Multiplicity="0..1" />
+    <End Role="Supply_Permissions" Type="Self.Supply_Permission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Warhouses">
+        <PropertyRef Name="Wrh_Id" />
+      </Principal>
+      <Dependent Role="Supply_Permissions">
+        <PropertyRef Name="Spl_Warhouse" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_SupplyPrm_Prds_Supply_Permissions">
     <End Role="Supply_Permissions" Type="Self.Supply_Permission" Multiplicity="1" />
     <End Role="SupplyPrm_Prds" Type="Self.SupplyPrm_Prds" Multiplicity="*" />
@@ -204,10 +202,6 @@
         <PropertyRef Name="Sup_Id" />
       </Dependent>
     </ReferentialConstraint>
-  </Association>
-  <Association Name="Manger_Warhouses">
-    <End Role="Mangers" Type="Self.Manger" Multiplicity="0..1" />
-    <End Role="Warhouses" Type="Self.Warhous" Multiplicity="*" />
   </Association>
   <EntityContainer Name="WarehousesEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Customers" EntityType="Self.Customer" />
@@ -228,13 +222,9 @@
       <End Role="Dismissal_Permission" EntitySet="Dismissal_Permissions" />
       <End Role="Dismissal_Prd" EntitySet="Dismissal_Prd" />
     </AssociationSet>
-    <AssociationSet Name="FK_Dismissal_Prd_Products" Association="Self.FK_Dismissal_Prd_Products">
-      <End Role="Products" EntitySet="Products" />
-      <End Role="Dismissal_Prd" EntitySet="Dismissal_Prd" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Products_Warhouses" Association="Self.FK_Products_Warhouses">
+    <AssociationSet Name="FK_Warhouses_Mangers" Association="Self.FK_Warhouses_Mangers">
+      <End Role="Mangers" EntitySet="Mangers" />
       <End Role="Warhouses" EntitySet="Warhouses" />
-      <End Role="Products" EntitySet="Products" />
     </AssociationSet>
     <AssociationSet Name="FK_SupplyPrm_Prds_Products" Association="Self.FK_SupplyPrm_Prds_Products">
       <End Role="Products" EntitySet="Products" />
@@ -244,13 +234,13 @@
       <End Role="Suppliers" EntitySet="Suppliers" />
       <End Role="Supply_Permissions" EntitySet="Supply_Permissions" />
     </AssociationSet>
+    <AssociationSet Name="FK_Supply_Permissions_Warhouses" Association="Self.FK_Supply_Permissions_Warhouses">
+      <End Role="Warhouses" EntitySet="Warhouses" />
+      <End Role="Supply_Permissions" EntitySet="Supply_Permissions" />
+    </AssociationSet>
     <AssociationSet Name="FK_SupplyPrm_Prds_Supply_Permissions" Association="Self.FK_SupplyPrm_Prds_Supply_Permissions">
       <End Role="Supply_Permissions" EntitySet="Supply_Permissions" />
       <End Role="SupplyPrm_Prds" EntitySet="SupplyPrm_Prds" />
-    </AssociationSet>
-    <AssociationSet Name="Manger_Warhouses" Association="Self.Manger_Warhouses">
-      <End Role="Mangers" EntitySet="Mangers" />
-      <End Role="Warhouses" EntitySet="Warhouses" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

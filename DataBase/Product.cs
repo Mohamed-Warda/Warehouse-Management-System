@@ -17,10 +17,10 @@ namespace Warehouse_Management_System.DataBase
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Product()
         {
-            this.Dismissal_Prd = new HashSet<Dismissal_Prd>();
             this.SupplyPrm_Prds = new HashSet<SupplyPrm_Prds>();
         }
     
+        public int Prd_Id { get; set; }
         public int Prd_Code { get; set; }
         public string Prd_Name { get; set; }
         public string Prd_Unit { get; set; }
@@ -30,11 +30,7 @@ namespace Warehouse_Management_System.DataBase
         public string Prd_Image { get; set; }
         public Nullable<int> Prd_Quantity { get; set; }
         public Nullable<int> Prd_Warhouse { get; set; }
-        public int Prd_Id { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Dismissal_Prd> Dismissal_Prd { get; set; }
-        public virtual Warhous Warhous { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SupplyPrm_Prds> SupplyPrm_Prds { get; set; }
     }

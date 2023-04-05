@@ -138,6 +138,12 @@
     <Compile Include="Screens\Users\NewUser.Designer.cs">
       <DependentUpon>NewUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\Warhouses\WarhouseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Warhouses\WarhouseForm.Designer.cs">
+      <DependentUpon>WarhouseForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -166,6 +172,9 @@
     <EmbeddedResource Include="Screens\Users\NewUser.resx">
       <DependentUpon>NewUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Warhouses\WarhouseForm.resx">
+      <DependentUpon>WarhouseForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="DataBase\ModelEF.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ModelEF.Designer.cs</LastGenOutput>
@@ -189,10 +198,16 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="Images\supplier.png" />
+    <None Include="Images\reload.png" />
+    <None Include="Images\warhouse.png" />
+    <None Include="Images\supplyprd.png" />
+    <None Include="Images\supply.png" />
     <None Include="Images\register.png" />
     <None Include="Images\background.jpg" />
     <None Include="Images\Add Button.png" />
     <None Include="Images\Add_Icon.png" />
+    <None Include="Images\delete.png" />
     <Content Include="DataBase\ModelEF.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModelEF.edmx</DependentUpon>
@@ -203,6 +218,7 @@
       <DependentUpon>ModelEF.edmx</DependentUpon>
       <LastGenOutput>ModelEF.cs</LastGenOutput>
     </Content>
+    <None Include="Images\customer.png" />
     <Content Include="Images\Login.png" />
   </ItemGroup>
   <ItemGroup>

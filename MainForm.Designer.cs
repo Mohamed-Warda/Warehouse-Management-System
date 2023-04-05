@@ -49,6 +49,11 @@
             this.mangeWarhousesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnSP = new System.Windows.Forms.Button();
+          
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -229,16 +234,84 @@
             this.toolStripMenuItem3.Text = "Add New Manger";
             this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(883, 317);
+            this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(468, 42);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Products Supply Permission ";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(180, 317);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(192, 42);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Warhouses";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.IndianRed;
+            this.button1.BackgroundImage = global::Warehouse_Management_System.Properties.Resources.warhouse;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button1.Location = new System.Drawing.Point(138, 99);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(250, 193);
+            this.button1.TabIndex = 8;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnSP
+            // 
+            this.btnSP.BackColor = System.Drawing.Color.IndianRed;
+            this.btnSP.BackgroundImage = global::Warehouse_Management_System.Properties.Resources.supply;
+            this.btnSP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSP.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSP.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnSP.Location = new System.Drawing.Point(982, 99);
+            this.btnSP.Name = "btnSP";
+            this.btnSP.Size = new System.Drawing.Size(250, 193);
+            this.btnSP.TabIndex = 1;
+            this.btnSP.UseVisualStyleBackColor = false;
+            this.btnSP.Click += new System.EventHandler(this.btnSP_Click);
+            // 
+            // label2
+            // 
+        
+            // 
+            // button2
+            // 
+          
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Warehouse_Management_System.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(1384, 678);
+          
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.btnSP);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.Text = "MainForm";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -269,5 +342,9 @@
         private System.Windows.Forms.ToolStripMenuItem mangeWarhousesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.Button btnSP;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -19,6 +19,5 @@ namespace Warehouse_Management_System.DataBase
         public Nullable<int> Diss_PrdQ { get; set; }
     
         public virtual Dismissal_Permission Dismissal_Permission { get; set; }
-        public virtual Product Product { get; set; }
     }
 }

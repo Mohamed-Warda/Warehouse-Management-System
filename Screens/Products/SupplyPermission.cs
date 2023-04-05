@@ -26,6 +26,9 @@ namespace Warehouse_Management_System.Screens.Products
             cbSupName.DataSource = wrs.Suppliers.Select(sup => new {sup.Name , sup.Id }).ToList();
             cbSupName.ValueMember = "Id";
             cbSupName.DisplayMember = "Name";
+            dgPerm.DataSource = wrs.Supply_Permissions.Select(sp => new { sp.Spl_Id, Supplier_Name= sp.Supplier.Name ,Warhouse_Name =sp.Warhous.Wrh_Name ,sp.Spl_CreatedAt}).ToList() ;
+
+
         }
 
         private void btnAddProduct_Click(object sender, EventArgs e)
@@ -46,6 +49,11 @@ namespace Warehouse_Management_System.Screens.Products
         private void dgNewPrd_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
     }

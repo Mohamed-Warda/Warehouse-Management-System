@@ -26,6 +26,7 @@ namespace Warehouse_Management_System.DataBase
         public Nullable<System.DateTime> Spl_CreatedAt { get; set; }
     
         public virtual Supplier Supplier { get; set; }
+        public virtual Warhous Warhous { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SupplyPrm_Prds> SupplyPrm_Prds { get; set; }
     }

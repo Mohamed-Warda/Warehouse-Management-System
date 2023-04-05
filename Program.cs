@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Warehouse_Management_System.Screens.Products;
 using Warehouse_Management_System.Screens.Users;
+using Warehouse_Management_System.Screens.Warhouses;
 
 namespace Warehouse_Management_System
 {
@@ -18,7 +19,7 @@ namespace Warehouse_Management_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SupplyPermission());
+            Application.Run(new WarhouseForm());
         }
     }
 }

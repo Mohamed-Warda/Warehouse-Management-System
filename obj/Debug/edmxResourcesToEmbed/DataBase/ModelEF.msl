@@ -47,6 +47,7 @@
     <EntitySetMapping Name="Products">
       <EntityTypeMapping TypeName="WarehousesModel.Product">
         <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="Prd_Id" ColumnName="Prd_Id" />
           <ScalarProperty Name="Prd_Code" ColumnName="Prd_Code" />
           <ScalarProperty Name="Prd_Name" ColumnName="Prd_Name" />
           <ScalarProperty Name="Prd_Unit" ColumnName="Prd_Unit" />
@@ -56,7 +57,6 @@
           <ScalarProperty Name="Prd_Image" ColumnName="Prd_Image" />
           <ScalarProperty Name="Prd_Quantity" ColumnName="Prd_Quantity" />
           <ScalarProperty Name="Prd_Warhouse" ColumnName="Prd_Warhouse" />
-          <ScalarProperty Name="Prd_Id" ColumnName="Prd_Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -114,13 +114,5 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <AssociationSetMapping Name="Manger_Warhouses" TypeName="WarehousesModel.Manger_Warhouses" StoreEntitySet="Manger_Warhouses">
-      <EndProperty Name="Mangers">
-        <ScalarProperty Name="Mng_Id" ColumnName="Mng_Id" />
-      </EndProperty>
-      <EndProperty Name="Warhouses">
-        <ScalarProperty Name="Wrh_Id" ColumnName="Wrs_Id" />
-      </EndProperty>
-    </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping>
