@@ -114,6 +114,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Screens\Customers\CustomersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Customers\CustomersForm.Designer.cs">
+      <DependentUpon>CustomersForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\Mangers\Add_Manger.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +172,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Screens\Customers\CustomersForm.resx">
+      <DependentUpon>CustomersForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Mangers\Add_Manger.resx">
       <DependentUpon>Add_Manger.cs</DependentUpon>
     </EmbeddedResource>
@@ -207,6 +216,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="Images\manger.jpg" />
     <None Include="Images\supplier.png" />
     <None Include="Images\reload.png" />
     <None Include="Images\warhouse.png" />

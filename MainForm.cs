@@ -8,8 +8,10 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Warehouse_Management_System.Screens.Customers;
 using Warehouse_Management_System.Screens.Mangers;
 using Warehouse_Management_System.Screens.Products;
+using Warehouse_Management_System.Screens.Suppliers;
 using Warehouse_Management_System.Screens.Users;
 using Warehouse_Management_System.Screens.Warhouses;
 
@@ -90,6 +92,36 @@ namespace Warehouse_Management_System
         private void button1_Click(object sender, EventArgs e)
         {
             WarhouseForm frm = new WarhouseForm();
+            frm.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SuppliersForm frm = new SuppliersForm();
+            frm.Show();
+        }
+
+        private void mangeWarhousesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WarhouseForm frm = new WarhouseForm();
+            frm.Show();
+        }
+
+        private void mangeSuppliersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SuppliersForm frm = new SuppliersForm();
+            frm.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            CustomersForm frm = new CustomersForm();
+            frm.Show();
+        }
+
+        private void mangeCustomersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CustomersForm frm = new CustomersForm();
             frm.Show();
         }
     }

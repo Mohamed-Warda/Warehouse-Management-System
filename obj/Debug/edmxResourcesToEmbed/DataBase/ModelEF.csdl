@@ -10,7 +10,6 @@
     <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Dismissal_Permission" Relationship="Self.FK_Dismissal_Permission_Customers" FromRole="Customers" ToRole="Dismissal_Permission" />
   </EntityType>
   <EntityType Name="Dismissal_Permission">

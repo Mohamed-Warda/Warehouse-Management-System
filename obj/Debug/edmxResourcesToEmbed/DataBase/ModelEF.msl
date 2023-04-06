@@ -10,7 +10,6 @@
           <ScalarProperty Name="Phone" ColumnName="Phone" />
           <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="Address" ColumnName="Address" />
-          <ScalarProperty Name="Image" ColumnName="Image" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

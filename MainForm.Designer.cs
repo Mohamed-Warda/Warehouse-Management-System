@@ -39,13 +39,10 @@
             this.mangeProductsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changeProductLocationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.customersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addNewCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mangeCustomersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.suppliersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addNewSupplierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mangeSuppliersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.warhousesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addNewWarhouseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mangeWarhousesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,14 +51,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnsuppliers = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnSP = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnMng = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
@@ -91,14 +91,14 @@
             // logOutToolStripMenuItem
             // 
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(165, 28);
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.logOutToolStripMenuItem.Text = "Log Out";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(165, 28);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -150,31 +150,23 @@
             // customersToolStripMenuItem
             // 
             this.customersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addNewCustomerToolStripMenuItem,
             this.mangeCustomersToolStripMenuItem});
             this.customersToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customersToolStripMenuItem.Name = "customersToolStripMenuItem";
             this.customersToolStripMenuItem.Size = new System.Drawing.Size(114, 27);
             this.customersToolStripMenuItem.Text = "Customers";
             // 
-            // addNewCustomerToolStripMenuItem
-            // 
-            this.addNewCustomerToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addNewCustomerToolStripMenuItem.Name = "addNewCustomerToolStripMenuItem";
-            this.addNewCustomerToolStripMenuItem.Size = new System.Drawing.Size(251, 26);
-            this.addNewCustomerToolStripMenuItem.Text = "Add New Customer";
-            // 
             // mangeCustomersToolStripMenuItem
             // 
             this.mangeCustomersToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mangeCustomersToolStripMenuItem.Name = "mangeCustomersToolStripMenuItem";
-            this.mangeCustomersToolStripMenuItem.Size = new System.Drawing.Size(251, 26);
+            this.mangeCustomersToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
             this.mangeCustomersToolStripMenuItem.Text = "Mange Customers";
+            this.mangeCustomersToolStripMenuItem.Click += new System.EventHandler(this.mangeCustomersToolStripMenuItem_Click);
             // 
             // suppliersToolStripMenuItem
             // 
             this.suppliersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addNewSupplierToolStripMenuItem,
             this.mangeSuppliersToolStripMenuItem});
             this.suppliersToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.suppliersToolStripMenuItem.Name = "suppliersToolStripMenuItem";
@@ -182,43 +174,30 @@
             this.suppliersToolStripMenuItem.Text = "Suppliers";
             this.suppliersToolStripMenuItem.Click += new System.EventHandler(this.suppliersToolStripMenuItem_Click);
             // 
-            // addNewSupplierToolStripMenuItem
-            // 
-            this.addNewSupplierToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addNewSupplierToolStripMenuItem.Name = "addNewSupplierToolStripMenuItem";
-            this.addNewSupplierToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
-            this.addNewSupplierToolStripMenuItem.Text = "Add New Supplier";
-            // 
             // mangeSuppliersToolStripMenuItem
             // 
             this.mangeSuppliersToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mangeSuppliersToolStripMenuItem.Name = "mangeSuppliersToolStripMenuItem";
-            this.mangeSuppliersToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
+            this.mangeSuppliersToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.mangeSuppliersToolStripMenuItem.Text = "Mange Suppliers";
+            this.mangeSuppliersToolStripMenuItem.Click += new System.EventHandler(this.mangeSuppliersToolStripMenuItem_Click);
             // 
             // warhousesToolStripMenuItem
             // 
             this.warhousesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addNewWarhouseToolStripMenuItem,
             this.mangeWarhousesToolStripMenuItem});
             this.warhousesToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.warhousesToolStripMenuItem.Name = "warhousesToolStripMenuItem";
             this.warhousesToolStripMenuItem.Size = new System.Drawing.Size(116, 27);
             this.warhousesToolStripMenuItem.Text = "Warhouses";
             // 
-            // addNewWarhouseToolStripMenuItem
-            // 
-            this.addNewWarhouseToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addNewWarhouseToolStripMenuItem.Name = "addNewWarhouseToolStripMenuItem";
-            this.addNewWarhouseToolStripMenuItem.Size = new System.Drawing.Size(253, 26);
-            this.addNewWarhouseToolStripMenuItem.Text = "Add New Warhouse";
-            // 
             // mangeWarhousesToolStripMenuItem
             // 
             this.mangeWarhousesToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mangeWarhousesToolStripMenuItem.Name = "mangeWarhousesToolStripMenuItem";
-            this.mangeWarhousesToolStripMenuItem.Size = new System.Drawing.Size(253, 26);
+            this.mangeWarhousesToolStripMenuItem.Size = new System.Drawing.Size(237, 26);
             this.mangeWarhousesToolStripMenuItem.Text = "Mange Warhouses";
+            this.mangeWarhousesToolStripMenuItem.Click += new System.EventHandler(this.mangeWarhousesToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -292,7 +271,7 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.IndianRed;
+            this.button3.BackColor = System.Drawing.Color.Transparent;
             this.button3.BackgroundImage = global::Warehouse_Management_System.Properties.Resources.customer1;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -302,23 +281,25 @@
             this.button3.Size = new System.Drawing.Size(250, 193);
             this.button3.TabIndex = 12;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
+            // btnsuppliers
             // 
-            this.button2.BackColor = System.Drawing.Color.IndianRed;
-            this.button2.BackgroundImage = global::Warehouse_Management_System.Properties.Resources.supplier;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(514, 381);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(250, 193);
-            this.button2.TabIndex = 10;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnsuppliers.BackColor = System.Drawing.Color.Transparent;
+            this.btnsuppliers.BackgroundImage = global::Warehouse_Management_System.Properties.Resources.supplier;
+            this.btnsuppliers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnsuppliers.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnsuppliers.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnsuppliers.Location = new System.Drawing.Point(514, 381);
+            this.btnsuppliers.Name = "btnsuppliers";
+            this.btnsuppliers.Size = new System.Drawing.Size(250, 193);
+            this.btnsuppliers.TabIndex = 10;
+            this.btnsuppliers.UseVisualStyleBackColor = false;
+            this.btnsuppliers.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.IndianRed;
+            this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.BackgroundImage = global::Warehouse_Management_System.Properties.Resources.warhouse;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -332,7 +313,7 @@
             // 
             // btnSP
             // 
-            this.btnSP.BackColor = System.Drawing.Color.IndianRed;
+            this.btnSP.BackColor = System.Drawing.Color.Transparent;
             this.btnSP.BackgroundImage = global::Warehouse_Management_System.Properties.Resources.supply;
             this.btnSP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSP.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -344,15 +325,44 @@
             this.btnSP.UseVisualStyleBackColor = false;
             this.btnSP.Click += new System.EventHandler(this.btnSP_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(1034, 599);
+            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(159, 42);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Mangers";
+            // 
+            // btnMng
+            // 
+            this.btnMng.BackColor = System.Drawing.Color.Transparent;
+            this.btnMng.BackgroundImage = global::Warehouse_Management_System.Properties.Resources.manger;
+            this.btnMng.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMng.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnMng.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnMng.Location = new System.Drawing.Point(992, 381);
+            this.btnMng.Name = "btnMng";
+            this.btnMng.Size = new System.Drawing.Size(250, 193);
+            this.btnMng.TabIndex = 14;
+            this.btnMng.UseVisualStyleBackColor = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Warehouse_Management_System.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(1384, 678);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.btnMng);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnsuppliers);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);
@@ -383,12 +393,9 @@
         private System.Windows.Forms.ToolStripMenuItem changeProductLocationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem customersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem suppliersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addNewCustomerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mangeCustomersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addNewSupplierToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mangeSuppliersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem warhousesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addNewWarhouseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mangeWarhousesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
@@ -397,8 +404,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnsuppliers;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnMng;
     }
 }
