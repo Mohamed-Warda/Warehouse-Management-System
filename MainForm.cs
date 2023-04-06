@@ -124,6 +124,24 @@ namespace Warehouse_Management_System
             CustomersForm frm = new CustomersForm();
             frm.Show();
         }
+
+        private void addProductsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SupplyPermission frm = new SupplyPermission();
+            frm.Show();
+        }
+
+        private void createPermissionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SupplyPermission frm = new SupplyPermission();
+            frm.Show();
+        }
+
+        private void updatePermissionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UpdateSpPermission frm = new UpdateSpPermission();
+            frm.Show();
+        }
     }
     }
 

@@ -132,11 +132,23 @@
     <Compile Include="Screens\Products\AddNewPrd.Designer.cs">
       <DependentUpon>AddNewPrd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\Products\ProductsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Products\ProductsList.Designer.cs">
+      <DependentUpon>ProductsList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\Products\SupplyPermission.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Screens\Products\SupplyPermission.Designer.cs">
       <DependentUpon>SupplyPermission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Products\UpdateSpPermission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Products\UpdateSpPermission.Designer.cs">
+      <DependentUpon>UpdateSpPermission.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\Suppliers\SuppliersForm.cs">
       <SubType>Form</SubType>
@@ -181,8 +193,14 @@
     <EmbeddedResource Include="Screens\Products\AddNewPrd.resx">
       <DependentUpon>AddNewPrd.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Products\ProductsList.resx">
+      <DependentUpon>ProductsList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Products\SupplyPermission.resx">
       <DependentUpon>SupplyPermission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Products\UpdateSpPermission.resx">
+      <DependentUpon>UpdateSpPermission.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Suppliers\SuppliersForm.resx">
       <DependentUpon>SuppliersForm.cs</DependentUpon>

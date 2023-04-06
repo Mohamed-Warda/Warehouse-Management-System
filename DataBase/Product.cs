@@ -33,5 +33,6 @@ namespace Warehouse_Management_System.DataBase
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SupplyPrm_Prds> SupplyPrm_Prds { get; set; }
+        public virtual Warhous Warhous { get; set; }
     }
 }

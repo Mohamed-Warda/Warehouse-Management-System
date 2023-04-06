@@ -127,6 +127,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_Products_Warhouses">
+    <End Role="Warhouses" Type="Self.Warhouses" Multiplicity="0..1" />
+    <End Role="Products" Type="Self.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Warhouses">
+        <PropertyRef Name="Wrh_Id" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="Prd_Warhouse" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Supply Permissions_Suppliers">
     <End Role="Suppliers" Type="Self.Suppliers" Multiplicity="0..1" />
     <End Role="Supply Permissions" Type="Self.Supply Permissions" Multiplicity="*" />
@@ -205,6 +217,10 @@
     <AssociationSet Name="FK_Dismissal_Prd_Dismissal Permission" Association="Self.FK_Dismissal_Prd_Dismissal Permission">
       <End Role="Dismissal Permission" EntitySet="Dismissal Permission" />
       <End Role="Dismissal_Prd" EntitySet="Dismissal_Prd" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_Warhouses" Association="Self.FK_Products_Warhouses">
+      <End Role="Warhouses" EntitySet="Warhouses" />
+      <End Role="Products" EntitySet="Products" />
     </AssociationSet>
     <AssociationSet Name="FK_Supply Permissions_Suppliers" Association="Self.FK_Supply Permissions_Suppliers">
       <End Role="Suppliers" EntitySet="Suppliers" />

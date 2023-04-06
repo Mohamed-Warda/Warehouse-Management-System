@@ -22,6 +22,7 @@
         <AssociationConnector Association="WarehousesModel.FK_Supply_Permissions_Suppliers" ManuallyRouted="false" />
         <AssociationConnector Association="WarehousesModel.FK_Supply_Permissions_Warhouses" ManuallyRouted="false" />
         <AssociationConnector Association="WarehousesModel.FK_SupplyPrm_Prds_Supply_Permissions" ManuallyRouted="false" />
+        <AssociationConnector Association="WarehousesModel.FK_Products_Warhouses" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -36,6 +36,7 @@
             this.addNewUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateDeleteUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addProductsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mangeProductsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changeProductLocationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.customersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,6 +47,9 @@
             this.mangeWarhousesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.supplyPermissionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updatePermissionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createPermissionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -70,7 +74,8 @@
             this.customersToolStripMenuItem,
             this.suppliersToolStripMenuItem,
             this.warhousesToolStripMenuItem,
-            this.toolStripMenuItem1});
+            this.toolStripMenuItem1,
+            this.supplyPermissionsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 5, 0, 10);
@@ -91,14 +96,14 @@
             // logOutToolStripMenuItem
             // 
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(165, 28);
             this.logOutToolStripMenuItem.Text = "Log Out";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(165, 28);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -128,12 +133,20 @@
             // productsToolStripMenuItem
             // 
             this.productsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addProductsToolStripMenuItem,
             this.mangeProductsToolStripMenuItem,
             this.changeProductLocationToolStripMenuItem});
             this.productsToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.productsToolStripMenuItem.Name = "productsToolStripMenuItem";
             this.productsToolStripMenuItem.Size = new System.Drawing.Size(98, 27);
             this.productsToolStripMenuItem.Text = "Products";
+            // 
+            // addProductsToolStripMenuItem
+            // 
+            this.addProductsToolStripMenuItem.Name = "addProductsToolStripMenuItem";
+            this.addProductsToolStripMenuItem.Size = new System.Drawing.Size(308, 28);
+            this.addProductsToolStripMenuItem.Text = "Add Products";
+            this.addProductsToolStripMenuItem.Click += new System.EventHandler(this.addProductsToolStripMenuItem_Click);
             // 
             // mangeProductsToolStripMenuItem
             // 
@@ -178,7 +191,7 @@
             // 
             this.mangeSuppliersToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mangeSuppliersToolStripMenuItem.Name = "mangeSuppliersToolStripMenuItem";
-            this.mangeSuppliersToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.mangeSuppliersToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.mangeSuppliersToolStripMenuItem.Text = "Mange Suppliers";
             this.mangeSuppliersToolStripMenuItem.Click += new System.EventHandler(this.mangeSuppliersToolStripMenuItem_Click);
             // 
@@ -215,6 +228,32 @@
             this.toolStripMenuItem3.Size = new System.Drawing.Size(236, 26);
             this.toolStripMenuItem3.Text = "Add New Manger";
             this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
+            // 
+            // supplyPermissionsToolStripMenuItem
+            // 
+            this.supplyPermissionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.updatePermissionToolStripMenuItem,
+            this.createPermissionToolStripMenuItem});
+            this.supplyPermissionsToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.supplyPermissionsToolStripMenuItem.Name = "supplyPermissionsToolStripMenuItem";
+            this.supplyPermissionsToolStripMenuItem.Size = new System.Drawing.Size(184, 27);
+            this.supplyPermissionsToolStripMenuItem.Text = "Supply Permissions";
+            // 
+            // updatePermissionToolStripMenuItem
+            // 
+            this.updatePermissionToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.updatePermissionToolStripMenuItem.Name = "updatePermissionToolStripMenuItem";
+            this.updatePermissionToolStripMenuItem.Size = new System.Drawing.Size(243, 26);
+            this.updatePermissionToolStripMenuItem.Text = "Update Permission";
+            this.updatePermissionToolStripMenuItem.Click += new System.EventHandler(this.updatePermissionToolStripMenuItem_Click);
+            // 
+            // createPermissionToolStripMenuItem
+            // 
+            this.createPermissionToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.createPermissionToolStripMenuItem.Name = "createPermissionToolStripMenuItem";
+            this.createPermissionToolStripMenuItem.Size = new System.Drawing.Size(243, 26);
+            this.createPermissionToolStripMenuItem.Text = "Create Permission";
+            this.createPermissionToolStripMenuItem.Click += new System.EventHandler(this.createPermissionToolStripMenuItem_Click);
             // 
             // label6
             // 
@@ -409,5 +448,9 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnMng;
+        private System.Windows.Forms.ToolStripMenuItem addProductsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem supplyPermissionsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updatePermissionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem createPermissionToolStripMenuItem;
     }
 }

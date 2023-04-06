@@ -59,6 +59,7 @@
     <Property Name="Prd_Quantity" Type="Int32" />
     <Property Name="Prd_Warhouse" Type="Int32" />
     <NavigationProperty Name="SupplyPrm_Prds" Relationship="Self.FK_SupplyPrm_Prds_Products" FromRole="Products" ToRole="SupplyPrm_Prds" />
+    <NavigationProperty Name="Warhous" Relationship="WarehousesModel.FK_Products_Warhouses" FromRole="Product" ToRole="Warhous" />
   </EntityType>
   <EntityType Name="Supplier">
     <Key>
@@ -116,6 +117,7 @@
     <Property Name="Wrs_Mng" Type="Int32" />
     <NavigationProperty Name="Manger" Relationship="Self.FK_Warhouses_Mangers" FromRole="Warhouses" ToRole="Mangers" />
     <NavigationProperty Name="Supply_Permissions" Relationship="Self.FK_Supply_Permissions_Warhouses" FromRole="Warhouses" ToRole="Supply_Permissions" />
+    <NavigationProperty Name="Products" Relationship="WarehousesModel.FK_Products_Warhouses" FromRole="Warhous" ToRole="Product" />
   </EntityType>
   <Association Name="FK_Dismissal_Permission_Customers">
     <End Role="Customers" Type="Self.Customer" Multiplicity="0..1" />
@@ -240,5 +242,21 @@
       <End Role="Supply_Permissions" EntitySet="Supply_Permissions" />
       <End Role="SupplyPrm_Prds" EntitySet="SupplyPrm_Prds" />
     </AssociationSet>
+    <AssociationSet Name="FK_Products_Warhouses" Association="WarehousesModel.FK_Products_Warhouses">
+      <End Role="Warhous" EntitySet="Warhouses" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
   </EntityContainer>
+  <Association Name="FK_Products_Warhouses">
+    <End Type="WarehousesModel.Warhous" Role="Warhous" Multiplicity="0..1" />
+    <End Type="WarehousesModel.Product" Role="Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Warhous">
+        <PropertyRef Name="Wrh_Id" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="Prd_Warhouse" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>
