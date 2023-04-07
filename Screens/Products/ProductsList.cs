@@ -18,13 +18,13 @@ namespace Warehouse_Management_System.Screens.Products
         public ProductsList()
         {
             InitializeComponent();
-            dataGridView1.DataSource = wrs.Products.Select(pd => new { pd.Prd_Id,pd.Prd_Code,pd.Prd_Name,pd.Prd_Warhouse, pd.Warhous.Wrh_Name, pd.Prd_Unit,pd.Prd_Price,pd.Prd_Quantity,pd.Prd_ProductionDate,pd.Prd_ExpireDate, }).ToList();
+            dataGridView1.DataSource = wrs.Products.Select(pd => new { pd.Prd_Id,pd.Prd_Code,pd.Prd_Name,pd.Prd_Warhouse, pd.Warhous.Wrh_Name, pd.Prd_Unit,pd.Prd_Price,pd.Prd_Quantity,pd.Prd_ProductionDate,pd.Prd_ExpireDate,pd.Prd_ShippingDate }).ToList();
             this.Size = new Size(1300, 550);
         }
 
         private void btnR_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = wrs.Products.Select(pd => new { pd.Prd_Id, pd.Prd_Code, pd.Prd_Name, pd.Prd_Warhouse,pd.Warhous.Wrh_Name, pd.Prd_Unit, pd.Prd_Price, pd.Prd_Quantity, pd.Prd_ProductionDate, pd.Prd_ExpireDate, }).ToList();
+            dataGridView1.DataSource = wrs.Products.Select(pd => new { pd.Prd_Id, pd.Prd_Code, pd.Prd_Name, pd.Prd_Warhouse,pd.Warhous.Wrh_Name, pd.Prd_Unit, pd.Prd_Price, pd.Prd_Quantity, pd.Prd_ProductionDate, pd.Prd_ExpireDate, pd.Prd_ShippingDate }).ToList();
 
         }
 
@@ -100,7 +100,7 @@ namespace Warehouse_Management_System.Screens.Products
          
             else
             {
-                dataGridView1.DataSource = wrs.Products.Select(pd => new { pd.Prd_Id, pd.Prd_Code, pd.Prd_Name, pd.Prd_Warhouse, pd.Warhous.Wrh_Name, pd.Prd_Unit, pd.Prd_Price, pd.Prd_Quantity, pd.Prd_ProductionDate, pd.Prd_ExpireDate, })
+                dataGridView1.DataSource = wrs.Products.Select(pd => new { pd.Prd_Id, pd.Prd_Code, pd.Prd_Name, pd.Prd_Warhouse, pd.Warhous.Wrh_Name, pd.Prd_Unit, pd.Prd_Price, pd.Prd_Quantity, pd.Prd_ProductionDate, pd.Prd_ExpireDate, pd.Prd_ShippingDate })
 
                     .Where(wrs => wrs.Prd_Name.Contains(txtName.Text) ).ToList();
 

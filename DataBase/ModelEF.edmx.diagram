@@ -23,6 +23,9 @@
         <AssociationConnector Association="WarehousesModel.FK_Supply_Permissions_Warhouses" ManuallyRouted="false" />
         <AssociationConnector Association="WarehousesModel.FK_SupplyPrm_Prds_Supply_Permissions" ManuallyRouted="false" />
         <AssociationConnector Association="WarehousesModel.FK_Products_Warhouses" />
+        <AssociationConnector Association="WarehousesModel.FK_Dismissal_Permission_Warhouses" />
+        <AssociationConnector Association="WarehousesModel.FK_Dismissal_Prd_Products" />
+        <AssociationConnector Association="WarehousesModel.FK_Dismissal_Prd_Products1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

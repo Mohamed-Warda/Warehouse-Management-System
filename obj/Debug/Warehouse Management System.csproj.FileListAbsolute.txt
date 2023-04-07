@@ -44,3 +44,6 @@ F:\iti\Projects\EF-Project\Warehouse-Management-System\obj\Debug\Warehouse_Manag
 F:\iti\Projects\EF-Project\Warehouse-Management-System\obj\Debug\Warehouse_Management_System.Screens.Customers.CustomersForm.resources
 F:\iti\Projects\EF-Project\Warehouse-Management-System\obj\Debug\Warehouse_Management_System.Screens.Products.ProductsList.resources
 F:\iti\Projects\EF-Project\Warehouse-Management-System\obj\Debug\Warehouse_Management_System.Screens.Products.UpdateSpPermission.resources
+F:\iti\Projects\EF-Project\Warehouse-Management-System\obj\Debug\Warehouse_Management_System.Screens.Reports.ExpireDateReport.resources
+F:\iti\Projects\EF-Project\Warehouse-Management-System\obj\Debug\Warehouse_Management_System.Screens.Reports.StoredPeriodReport.resources
+F:\iti\Projects\EF-Project\Warehouse-Management-System\obj\Debug\Warehouse_Management_System.Screens.DismissalPermission.DismissalPermissionForm.resources

@@ -54,12 +54,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnMng = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.btnsuppliers = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnSP = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnMng = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -144,21 +150,21 @@
             // addProductsToolStripMenuItem
             // 
             this.addProductsToolStripMenuItem.Name = "addProductsToolStripMenuItem";
-            this.addProductsToolStripMenuItem.Size = new System.Drawing.Size(308, 28);
+            this.addProductsToolStripMenuItem.Size = new System.Drawing.Size(246, 28);
             this.addProductsToolStripMenuItem.Text = "Add Products";
             this.addProductsToolStripMenuItem.Click += new System.EventHandler(this.addProductsToolStripMenuItem_Click);
             // 
             // mangeProductsToolStripMenuItem
             // 
             this.mangeProductsToolStripMenuItem.Name = "mangeProductsToolStripMenuItem";
-            this.mangeProductsToolStripMenuItem.Size = new System.Drawing.Size(308, 28);
+            this.mangeProductsToolStripMenuItem.Size = new System.Drawing.Size(246, 28);
             this.mangeProductsToolStripMenuItem.Text = "Mange Products";
             // 
             // changeProductLocationToolStripMenuItem
             // 
             this.changeProductLocationToolStripMenuItem.Name = "changeProductLocationToolStripMenuItem";
-            this.changeProductLocationToolStripMenuItem.Size = new System.Drawing.Size(308, 28);
-            this.changeProductLocationToolStripMenuItem.Text = "Change Product Location";
+            this.changeProductLocationToolStripMenuItem.Size = new System.Drawing.Size(246, 28);
+            this.changeProductLocationToolStripMenuItem.Text = "Transfer Products";
             // 
             // customersToolStripMenuItem
             // 
@@ -261,12 +267,12 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(883, 317);
+            this.label6.Location = new System.Drawing.Point(1033, 276);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(468, 42);
+            this.label6.Size = new System.Drawing.Size(319, 42);
             this.label6.TabIndex = 7;
-            this.label6.Text = "Products Supply Permission ";
+            this.label6.Text = "Supply Permission ";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label1
@@ -275,7 +281,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(180, 317);
+            this.label1.Location = new System.Drawing.Point(119, 276);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(192, 42);
@@ -288,7 +294,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(556, 599);
+            this.label2.Location = new System.Drawing.Point(756, 599);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(168, 42);
@@ -301,12 +307,91 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(180, 599);
+            this.label3.Location = new System.Drawing.Point(117, 599);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(185, 42);
             this.label3.TabIndex = 13;
             this.label3.Text = "Customers";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(1114, 599);
+            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(159, 42);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Mangers";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(399, 276);
+            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(142, 42);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "Reports";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(659, 276);
+            this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(345, 42);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "Dismissal Permission";
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.BackgroundImage = global::Warehouse_Management_System.Properties.Resources.supplyprd1;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button4.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button4.Location = new System.Drawing.Point(684, 67);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(250, 193);
+            this.button4.TabIndex = 18;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.BackgroundImage = global::Warehouse_Management_System.Properties.Resources.reports;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button2.Location = new System.Drawing.Point(357, 58);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(250, 193);
+            this.button2.TabIndex = 16;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // btnMng
+            // 
+            this.btnMng.BackColor = System.Drawing.Color.Transparent;
+            this.btnMng.BackgroundImage = global::Warehouse_Management_System.Properties.Resources.manger;
+            this.btnMng.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMng.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnMng.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnMng.Location = new System.Drawing.Point(1072, 381);
+            this.btnMng.Name = "btnMng";
+            this.btnMng.Size = new System.Drawing.Size(250, 193);
+            this.btnMng.TabIndex = 14;
+            this.btnMng.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
@@ -315,7 +400,7 @@
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button3.Location = new System.Drawing.Point(138, 381);
+            this.button3.Location = new System.Drawing.Point(75, 381);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(250, 193);
             this.button3.TabIndex = 12;
@@ -329,7 +414,7 @@
             this.btnsuppliers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnsuppliers.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnsuppliers.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnsuppliers.Location = new System.Drawing.Point(514, 381);
+            this.btnsuppliers.Location = new System.Drawing.Point(714, 381);
             this.btnsuppliers.Name = "btnsuppliers";
             this.btnsuppliers.Size = new System.Drawing.Size(250, 193);
             this.btnsuppliers.TabIndex = 10;
@@ -343,7 +428,7 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(138, 99);
+            this.button1.Location = new System.Drawing.Point(75, 67);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(250, 193);
             this.button1.TabIndex = 8;
@@ -357,38 +442,38 @@
             this.btnSP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSP.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSP.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSP.Location = new System.Drawing.Point(982, 99);
+            this.btnSP.Location = new System.Drawing.Point(1071, 49);
             this.btnSP.Name = "btnSP";
             this.btnSP.Size = new System.Drawing.Size(250, 193);
             this.btnSP.TabIndex = 1;
             this.btnSP.UseVisualStyleBackColor = false;
             this.btnSP.Click += new System.EventHandler(this.btnSP_Click);
             // 
-            // label4
+            // label8
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(1034, 599);
-            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(159, 42);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "Mangers";
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(432, 599);
+            this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(185, 42);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "Employees";
             // 
-            // btnMng
+            // button5
             // 
-            this.btnMng.BackColor = System.Drawing.Color.Transparent;
-            this.btnMng.BackgroundImage = global::Warehouse_Management_System.Properties.Resources.manger;
-            this.btnMng.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMng.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnMng.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnMng.Location = new System.Drawing.Point(992, 381);
-            this.btnMng.Name = "btnMng";
-            this.btnMng.Size = new System.Drawing.Size(250, 193);
-            this.btnMng.TabIndex = 14;
-            this.btnMng.UseVisualStyleBackColor = false;
+            this.button5.BackColor = System.Drawing.Color.Transparent;
+            this.button5.BackgroundImage = global::Warehouse_Management_System.Properties.Resources.employee_icon_png_17;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button5.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button5.Location = new System.Drawing.Point(406, 381);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(250, 193);
+            this.button5.TabIndex = 20;
+            this.button5.UseVisualStyleBackColor = false;
             // 
             // MainForm
             // 
@@ -396,6 +481,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Warehouse_Management_System.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(1384, 678);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnMng);
             this.Controls.Add(this.label3);
@@ -452,5 +543,11 @@
         private System.Windows.Forms.ToolStripMenuItem supplyPermissionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updatePermissionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem createPermissionToolStripMenuItem;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button button5;
     }
 }

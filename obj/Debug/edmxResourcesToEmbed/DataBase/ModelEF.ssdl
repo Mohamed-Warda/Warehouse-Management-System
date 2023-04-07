@@ -53,6 +53,7 @@
     <Property Name="Prd_Image" Type="nvarchar(max)" />
     <Property Name="Prd_Quantity" Type="int" />
     <Property Name="Prd_Warhouse" Type="int" />
+    <Property Name="Prd_ShippingDate" Type="date" />
   </EntityType>
   <EntityType Name="Suppliers">
     <Key>
@@ -115,7 +116,19 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Dismissal_Prd_Dismissal Permission">
+  <Association Name="FK_Dismissal Permission_Warhouses">
+    <End Role="Warhouses" Type="Self.Warhouses" Multiplicity="0..1" />
+    <End Role="Dismissal Permission" Type="Self.Dismissal Permission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Warhouses">
+        <PropertyRef Name="Wrh_Id" />
+      </Principal>
+      <Dependent Role="Dismissal Permission">
+        <PropertyRef Name="Dis_Warhouse" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Dismissal_Prd_Dismissal Permission1">
     <End Role="Dismissal Permission" Type="Self.Dismissal Permission" Multiplicity="1" />
     <End Role="Dismissal_Prd" Type="Self.Dismissal_Prd" Multiplicity="*" />
     <ReferentialConstraint>
@@ -124,6 +137,18 @@
       </Principal>
       <Dependent Role="Dismissal_Prd">
         <PropertyRef Name="Diss_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Dismissal_Prd_Products1">
+    <End Role="Products" Type="Self.Products" Multiplicity="1" />
+    <End Role="Dismissal_Prd" Type="Self.Dismissal_Prd" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="Prd_Id" />
+      </Principal>
+      <Dependent Role="Dismissal_Prd">
+        <PropertyRef Name="Diss_Prd" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -214,8 +239,16 @@
       <End Role="Customers" EntitySet="Customers" />
       <End Role="Dismissal Permission" EntitySet="Dismissal Permission" />
     </AssociationSet>
-    <AssociationSet Name="FK_Dismissal_Prd_Dismissal Permission" Association="Self.FK_Dismissal_Prd_Dismissal Permission">
+    <AssociationSet Name="FK_Dismissal Permission_Warhouses" Association="Self.FK_Dismissal Permission_Warhouses">
+      <End Role="Warhouses" EntitySet="Warhouses" />
       <End Role="Dismissal Permission" EntitySet="Dismissal Permission" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Dismissal_Prd_Dismissal Permission1" Association="Self.FK_Dismissal_Prd_Dismissal Permission1">
+      <End Role="Dismissal Permission" EntitySet="Dismissal Permission" />
+      <End Role="Dismissal_Prd" EntitySet="Dismissal_Prd" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Dismissal_Prd_Products1" Association="Self.FK_Dismissal_Prd_Products1">
+      <End Role="Products" EntitySet="Products" />
       <End Role="Dismissal_Prd" EntitySet="Dismissal_Prd" />
     </AssociationSet>
     <AssociationSet Name="FK_Products_Warhouses" Association="Self.FK_Products_Warhouses">

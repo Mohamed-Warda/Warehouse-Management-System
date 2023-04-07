@@ -46,6 +46,7 @@
     <EntitySetMapping Name="Products">
       <EntityTypeMapping TypeName="WarehousesModel.Product">
         <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="Prd_ShippingDate" ColumnName="Prd_ShippingDate" />
           <ScalarProperty Name="Prd_Id" ColumnName="Prd_Id" />
           <ScalarProperty Name="Prd_Code" ColumnName="Prd_Code" />
           <ScalarProperty Name="Prd_Name" ColumnName="Prd_Name" />

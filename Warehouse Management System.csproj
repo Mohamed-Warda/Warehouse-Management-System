@@ -120,6 +120,12 @@
     <Compile Include="Screens\Customers\CustomersForm.Designer.cs">
       <DependentUpon>CustomersForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\DismissalPermission\DismissalPermissionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\DismissalPermission\DismissalPermissionForm.Designer.cs">
+      <DependentUpon>DismissalPermissionForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\Mangers\Add_Manger.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,17 +144,35 @@
     <Compile Include="Screens\Products\ProductsList.Designer.cs">
       <DependentUpon>ProductsList.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Products\SupplyPermission.cs">
+    <Compile Include="Screens\Products\TransferProdectForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Products\SupplyPermission.Designer.cs">
+    <Compile Include="Screens\Products\TransferProdectForm.Designer.cs">
+      <DependentUpon>TransferProdectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\SupplyPermission\SupplyPermission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\SupplyPermission\SupplyPermission.Designer.cs">
       <DependentUpon>SupplyPermission.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Products\UpdateSpPermission.cs">
+    <Compile Include="Screens\SupplyPermission\UpdateSpPermission.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Products\UpdateSpPermission.Designer.cs">
+    <Compile Include="Screens\SupplyPermission\UpdateSpPermission.Designer.cs">
       <DependentUpon>UpdateSpPermission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Reports\ExpireDateReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Reports\ExpireDateReport.Designer.cs">
+      <DependentUpon>ExpireDateReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Reports\StoredPeriodReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Reports\StoredPeriodReport.Designer.cs">
+      <DependentUpon>StoredPeriodReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\Suppliers\SuppliersForm.cs">
       <SubType>Form</SubType>
@@ -187,6 +211,9 @@
     <EmbeddedResource Include="Screens\Customers\CustomersForm.resx">
       <DependentUpon>CustomersForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\DismissalPermission\DismissalPermissionForm.resx">
+      <DependentUpon>DismissalPermissionForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Mangers\Add_Manger.resx">
       <DependentUpon>Add_Manger.cs</DependentUpon>
     </EmbeddedResource>
@@ -196,11 +223,17 @@
     <EmbeddedResource Include="Screens\Products\ProductsList.resx">
       <DependentUpon>ProductsList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Products\SupplyPermission.resx">
+    <EmbeddedResource Include="Screens\SupplyPermission\SupplyPermission.resx">
       <DependentUpon>SupplyPermission.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Products\UpdateSpPermission.resx">
+    <EmbeddedResource Include="Screens\SupplyPermission\UpdateSpPermission.resx">
       <DependentUpon>UpdateSpPermission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Reports\ExpireDateReport.resx">
+      <DependentUpon>ExpireDateReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Reports\StoredPeriodReport.resx">
+      <DependentUpon>StoredPeriodReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Suppliers\SuppliersForm.resx">
       <DependentUpon>SuppliersForm.cs</DependentUpon>
@@ -234,6 +267,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="Images\reports.png" />
     <None Include="Images\manger.jpg" />
     <None Include="Images\supplier.png" />
     <None Include="Images\reload.png" />
@@ -256,6 +290,8 @@
       <LastGenOutput>ModelEF.cs</LastGenOutput>
     </Content>
     <None Include="Images\customer.png" />
+    <None Include="Images\employee-icon-png-9.jpg" />
+    <None Include="Images\employee-icon-png-17.jpg" />
     <Content Include="Images\Login.png" />
   </ItemGroup>
   <ItemGroup>

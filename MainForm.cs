@@ -8,7 +8,9 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Warehouse_Management_System.DataBase;
 using Warehouse_Management_System.Screens.Customers;
+using Warehouse_Management_System.Screens.DismissalPermission;
 using Warehouse_Management_System.Screens.Mangers;
 using Warehouse_Management_System.Screens.Products;
 using Warehouse_Management_System.Screens.Suppliers;
@@ -140,6 +142,12 @@ namespace Warehouse_Management_System
         private void updatePermissionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             UpdateSpPermission frm = new UpdateSpPermission();
+            frm.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            DismissalPermissionForm frm = new DismissalPermissionForm();
             frm.Show();
         }
     }

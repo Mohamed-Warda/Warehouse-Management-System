@@ -18,6 +18,8 @@ namespace Warehouse_Management_System.DataBase
         public Product()
         {
             this.SupplyPrm_Prds = new HashSet<SupplyPrm_Prds>();
+            this.Dismissal_Prd = new HashSet<Dismissal_Prd>();
+            this.Dismissal_Prd1 = new HashSet<Dismissal_Prd>();
         }
     
         public int Prd_Id { get; set; }
@@ -30,9 +32,14 @@ namespace Warehouse_Management_System.DataBase
         public string Prd_Image { get; set; }
         public Nullable<int> Prd_Quantity { get; set; }
         public Nullable<int> Prd_Warhouse { get; set; }
+        public Nullable<System.DateTime> Prd_ShippingDate { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SupplyPrm_Prds> SupplyPrm_Prds { get; set; }
         public virtual Warhous Warhous { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Dismissal_Prd> Dismissal_Prd { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Dismissal_Prd> Dismissal_Prd1 { get; set; }
     }
 }

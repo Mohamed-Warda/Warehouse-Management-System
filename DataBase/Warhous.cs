@@ -19,6 +19,7 @@ namespace Warehouse_Management_System.DataBase
         {
             this.Supply_Permissions = new HashSet<Supply_Permission>();
             this.Products = new HashSet<Product>();
+            this.Dismissal_Permission = new HashSet<Dismissal_Permission>();
         }
     
         public int Wrh_Id { get; set; }
@@ -33,5 +34,7 @@ namespace Warehouse_Management_System.DataBase
         public virtual ICollection<Supply_Permission> Supply_Permissions { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Product> Products { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Dismissal_Permission> Dismissal_Permission { get; set; }
     }
 }
