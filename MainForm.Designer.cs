@@ -356,7 +356,7 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImage = global::Warehouse_Management_System.Properties.Resources.supplyprd1;
+            this.button4.BackgroundImage = global::Warehouse_Management_System.Properties.Resources.supplyprd;
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.ForeColor = System.Drawing.SystemColors.ControlText;

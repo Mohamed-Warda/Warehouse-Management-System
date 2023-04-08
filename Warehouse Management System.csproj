@@ -223,6 +223,9 @@
     <EmbeddedResource Include="Screens\Products\ProductsList.resx">
       <DependentUpon>ProductsList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Products\TransferProdectForm.resx">
+      <DependentUpon>TransferProdectForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\SupplyPermission\SupplyPermission.resx">
       <DependentUpon>SupplyPermission.cs</DependentUpon>
     </EmbeddedResource>
@@ -290,7 +293,6 @@
       <LastGenOutput>ModelEF.cs</LastGenOutput>
     </Content>
     <None Include="Images\customer.png" />
-    <None Include="Images\employee-icon-png-9.jpg" />
     <None Include="Images\employee-icon-png-17.jpg" />
     <Content Include="Images\Login.png" />
   </ItemGroup>
