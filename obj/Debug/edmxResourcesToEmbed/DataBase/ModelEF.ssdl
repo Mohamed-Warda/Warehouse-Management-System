@@ -29,6 +29,18 @@
     <Property Name="Diss_Id" Type="int" Nullable="false" />
     <Property Name="Diss_PrdQ" Type="int" />
   </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" />
+    <Property Name="Warhouse" Type="int" />
+  </EntityType>
   <EntityType Name="Mangers">
     <Key>
       <PropertyRef Name="Mng_Id" />
@@ -38,6 +50,18 @@
     <Property Name="Mng_Address" Type="nvarchar" MaxLength="50" />
     <Property Name="Mng_Email" Type="nvarchar" MaxLength="50" />
     <Property Name="Mng_Phone" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Product_Transfer_Log">
+    <Key>
+      <PropertyRef Name="Tr_Id" />
+    </Key>
+    <Property Name="Tr_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FromWarhouse" Type="int" />
+    <Property Name="ToWarhouse" Type="int" />
+    <Property Name="Tr_Prd" Type="int" />
+    <Property Name="Tr_Quantity" Type="int" />
+    <Property Name="Tr_Date" Type="date" />
+    <Property Name="Tr_Remaining Quantity" Type="int" />
   </EntityType>
   <EntityType Name="Products">
     <Key>
@@ -152,6 +176,54 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_Employee_Warhouses">
+    <End Role="Warhouses" Type="Self.Warhouses" Multiplicity="0..1" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Warhouses">
+        <PropertyRef Name="Wrh_Id" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="Warhouse" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_Transfer_Log_Products">
+    <End Role="Products" Type="Self.Products" Multiplicity="0..1" />
+    <End Role="Product_Transfer_Log" Type="Self.Product_Transfer_Log" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="Prd_Id" />
+      </Principal>
+      <Dependent Role="Product_Transfer_Log">
+        <PropertyRef Name="Tr_Prd" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_Transfer_Log_Warhouses">
+    <End Role="Warhouses" Type="Self.Warhouses" Multiplicity="0..1" />
+    <End Role="Product_Transfer_Log" Type="Self.Product_Transfer_Log" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Warhouses">
+        <PropertyRef Name="Wrh_Id" />
+      </Principal>
+      <Dependent Role="Product_Transfer_Log">
+        <PropertyRef Name="FromWarhouse" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_Transfer_Log_Warhouses1">
+    <End Role="Warhouses" Type="Self.Warhouses" Multiplicity="0..1" />
+    <End Role="Product_Transfer_Log" Type="Self.Product_Transfer_Log" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Warhouses">
+        <PropertyRef Name="Wrh_Id" />
+      </Principal>
+      <Dependent Role="Product_Transfer_Log">
+        <PropertyRef Name="ToWarhouse" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Products_Warhouses">
     <End Role="Warhouses" Type="Self.Warhouses" Multiplicity="0..1" />
     <End Role="Products" Type="Self.Products" Multiplicity="*" />
@@ -228,7 +300,9 @@
     <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Dismissal Permission" EntityType="Self.Dismissal Permission" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Dismissal_Prd" EntityType="Self.Dismissal_Prd" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Mangers" EntityType="Self.Mangers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product_Transfer_Log" EntityType="Self.Product_Transfer_Log" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Suppliers" EntityType="Self.Suppliers" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Supply Permissions" EntityType="Self.Supply Permissions" Schema="dbo" store:Type="Tables" />
@@ -250,6 +324,22 @@
     <AssociationSet Name="FK_Dismissal_Prd_Products1" Association="Self.FK_Dismissal_Prd_Products1">
       <End Role="Products" EntitySet="Products" />
       <End Role="Dismissal_Prd" EntitySet="Dismissal_Prd" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employee_Warhouses" Association="Self.FK_Employee_Warhouses">
+      <End Role="Warhouses" EntitySet="Warhouses" />
+      <End Role="Employee" EntitySet="Employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_Transfer_Log_Products" Association="Self.FK_Product_Transfer_Log_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="Product_Transfer_Log" EntitySet="Product_Transfer_Log" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_Transfer_Log_Warhouses" Association="Self.FK_Product_Transfer_Log_Warhouses">
+      <End Role="Warhouses" EntitySet="Warhouses" />
+      <End Role="Product_Transfer_Log" EntitySet="Product_Transfer_Log" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_Transfer_Log_Warhouses1" Association="Self.FK_Product_Transfer_Log_Warhouses1">
+      <End Role="Warhouses" EntitySet="Warhouses" />
+      <End Role="Product_Transfer_Log" EntitySet="Product_Transfer_Log" />
     </AssociationSet>
     <AssociationSet Name="FK_Products_Warhouses" Association="Self.FK_Products_Warhouses">
       <End Role="Warhouses" EntitySet="Warhouses" />

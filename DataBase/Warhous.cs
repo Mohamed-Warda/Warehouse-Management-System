@@ -17,9 +17,12 @@ namespace Warehouse_Management_System.DataBase
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Warhous()
         {
-            this.Supply_Permissions = new HashSet<Supply_Permission>();
-            this.Products = new HashSet<Product>();
             this.Dismissal_Permission = new HashSet<Dismissal_Permission>();
+            this.Employees = new HashSet<Employee>();
+            this.Product_Transfer_Log = new HashSet<Product_Transfer_Log>();
+            this.Product_Transfer_Log1 = new HashSet<Product_Transfer_Log>();
+            this.Products = new HashSet<Product>();
+            this.Supply_Permissions = new HashSet<Supply_Permission>();
         }
     
         public int Wrh_Id { get; set; }
@@ -29,12 +32,18 @@ namespace Warehouse_Management_System.DataBase
         public string Wrs_Phone { get; set; }
         public Nullable<int> Wrs_Mng { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Dismissal_Permission> Dismissal_Permission { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Employee> Employees { get; set; }
         public virtual Manger Manger { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Supply_Permission> Supply_Permissions { get; set; }
+        public virtual ICollection<Product_Transfer_Log> Product_Transfer_Log { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Product_Transfer_Log> Product_Transfer_Log1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Product> Products { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Dismissal_Permission> Dismissal_Permission { get; set; }
+        public virtual ICollection<Supply_Permission> Supply_Permissions { get; set; }
     }
 }

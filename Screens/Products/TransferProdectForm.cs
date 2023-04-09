@@ -36,30 +36,42 @@ namespace Warehouse_Management_System.Screens.Products
             txtID.Text = pd.Prd_Id.ToString();
             txtName.Text = pd.Prd_Name;
             txtQt.Text = pd.Prd_Quantity.ToString();
-            cbWrsName.Text = pd.Warhous.Wrh_Name;
+            cbWrsName.Text = pd.Warhous.Wrh_Name   ;
 
         }
 
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
             var prd = wrs.Products.SingleOrDefault(prod => prod.Prd_Id == PrdId);
-
+            if(prd.Prd_Warhouse== int.Parse(cbWrsName.SelectedValue.ToString()))
+            {
+                MessageBox.Show("You Choice the Same Warehouse!");
+            }
             //check the entered quantity
-            if (int.Parse(txtQt.Text) >prd.Prd_Quantity  ) {
+           else if (int.Parse(txtQt.Text) >prd.Prd_Quantity  ) {
                 MessageBox.Show("The Required Quantity is not Avilable");
             }
             else if(int.Parse(txtQt.Text) == prd.Prd_Quantity)
             {
+                Product_Transfer_Log newLog = new Product_Transfer_Log() {Tr_Remaining_Quantity=0,Tr_Prd = prd.Prd_Id, FromWarhouse =prd.Prd_Warhouse,ToWarhouse= int.Parse(cbWrsName.SelectedValue.ToString()),Tr_Date=DateTime.Now,Tr_Quantity=prd.Prd_Quantity };
+                wrs.Product_Transfer_Log.Add(newLog);
                 prd.Prd_Warhouse = int.Parse(cbWrsName.SelectedValue.ToString());
                 wrs.SaveChanges();
+
+               
                 dataGridView1.DataSource = wrs.Products.Select(pd => new { pd.Prd_Id, pd.Prd_Name, pd.Prd_Quantity, pd.Prd_Warhouse, pd.Warhous.Wrh_Name }).ToList();
 
 
             }
             else
             {
+
+                int remainingQ = (int)(prd.Prd_Quantity - int.Parse(txtQt.Text));
+
+                Product_Transfer_Log newLog = new Product_Transfer_Log() {Tr_Remaining_Quantity= remainingQ, Tr_Prd=prd.Prd_Id ,FromWarhouse = prd.Prd_Warhouse, ToWarhouse = int.Parse(cbWrsName.SelectedValue.ToString()), Tr_Date = DateTime.Now, Tr_Quantity = int.Parse(txtQt.Text) };
+                wrs.Product_Transfer_Log.Add(newLog);
+
                 prd.Prd_Warhouse = int.Parse(cbWrsName.SelectedValue.ToString());
-                int remainingQ= (int)(prd.Prd_Quantity - int.Parse(txtQt.Text));
                 prd.Prd_Quantity = remainingQ;
 
                 Product newPrd = new Product()

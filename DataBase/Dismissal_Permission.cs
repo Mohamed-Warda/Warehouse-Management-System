@@ -26,8 +26,8 @@ namespace Warehouse_Management_System.DataBase
         public Nullable<int> Dis_Custmer { get; set; }
     
         public virtual Customer Customer { get; set; }
+        public virtual Warhous Warhous { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Dismissal_Prd> Dismissal_Prd { get; set; }
-        public virtual Warhous Warhous { get; set; }
     }
 }

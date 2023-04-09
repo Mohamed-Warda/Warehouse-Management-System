@@ -35,7 +35,6 @@
             this.entityCommand1 = new System.Data.Entity.Core.EntityClient.EntityCommand();
             this.cbWrsName = new System.Windows.Forms.ComboBox();
             this.cbSupName = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.dgPerm = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgPerm)).BeginInit();
             this.SuspendLayout();
@@ -45,7 +44,7 @@
             this.btnAddProduct.BackColor = System.Drawing.Color.IndianRed;
             this.btnAddProduct.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddProduct.ForeColor = System.Drawing.Color.White;
-            this.btnAddProduct.Location = new System.Drawing.Point(700, 109);
+            this.btnAddProduct.Location = new System.Drawing.Point(647, 118);
             this.btnAddProduct.Name = "btnAddProduct";
             this.btnAddProduct.Size = new System.Drawing.Size(204, 73);
             this.btnAddProduct.TabIndex = 1;
@@ -107,18 +106,6 @@
             this.cbSupName.Size = new System.Drawing.Size(185, 24);
             this.cbSupName.TabIndex = 8;
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.IndianRed;
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(667, 449);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(204, 77);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Update Permission";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
             // dgPerm
             // 
             this.dgPerm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -136,7 +123,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(916, 651);
             this.Controls.Add(this.dgPerm);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.cbSupName);
             this.Controls.Add(this.cbWrsName);
             this.Controls.Add(this.label3);
@@ -160,7 +146,6 @@
         private System.Data.Entity.Core.EntityClient.EntityCommand entityCommand1;
         private System.Windows.Forms.ComboBox cbWrsName;
         private System.Windows.Forms.ComboBox cbSupName;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dgPerm;
     }
 }

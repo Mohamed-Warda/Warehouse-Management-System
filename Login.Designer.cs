@@ -89,7 +89,7 @@
             this.button1.BackgroundImage = global::Warehouse_Management_System.Properties.Resources.Login;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(288, 245);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(216, 66);

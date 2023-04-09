@@ -30,7 +30,6 @@ F:\iti\Projects\EF-Project\Warehouse-Management-System\obj\Debug\Warehouse Manag
 F:\iti\Projects\EF-Project\Warehouse-Management-System\obj\Debug\Warehouse_Management_System.Login.resources
 F:\iti\Projects\EF-Project\Warehouse-Management-System\obj\Debug\Warehouse_Management_System.MainForm.resources
 F:\iti\Projects\EF-Project\Warehouse-Management-System\obj\Debug\Warehouse_Management_System.Properties.Resources.resources
-F:\iti\Projects\EF-Project\Warehouse-Management-System\obj\Debug\Warehouse_Management_System.Screens.Mangers.Add_Manger.resources
 F:\iti\Projects\EF-Project\Warehouse-Management-System\obj\Debug\Warehouse_Management_System.Screens.Users.NewUser.resources
 F:\iti\Projects\EF-Project\Warehouse-Management-System\obj\Debug\Warehouse Management System.csproj.GenerateResource.cache
 F:\iti\Projects\EF-Project\Warehouse-Management-System\obj\Debug\Warehouse Management System.csproj.CoreCompileInputs.cache
@@ -48,3 +47,10 @@ F:\iti\Projects\EF-Project\Warehouse-Management-System\obj\Debug\Warehouse_Manag
 F:\iti\Projects\EF-Project\Warehouse-Management-System\obj\Debug\Warehouse_Management_System.Screens.Reports.StoredPeriodReport.resources
 F:\iti\Projects\EF-Project\Warehouse-Management-System\obj\Debug\Warehouse_Management_System.Screens.DismissalPermission.DismissalPermissionForm.resources
 F:\iti\Projects\EF-Project\Warehouse-Management-System\obj\Debug\Warehouse_Management_System.Screens.Products.TransferProdectForm.resources
+F:\iti\Projects\EF-Project\Warehouse-Management-System\obj\Debug\Warehouse_Management_System.Screens.Reports.WarhouseReport.resources
+F:\iti\Projects\EF-Project\Warehouse-Management-System\obj\Debug\Warehouse_Management_System.Screens.DismissalPermission.UpdateDismissalForm.resources
+F:\iti\Projects\EF-Project\Warehouse-Management-System\obj\Debug\Warehouse_Management_System.Screens.Employees.EmployeesForm.resources
+F:\iti\Projects\EF-Project\Warehouse-Management-System\obj\Debug\Warehouse_Management_System.Screens.Reports.TransferredProductsReport.resources
+F:\iti\Projects\EF-Project\Warehouse-Management-System\obj\Debug\Warehouse_Management_System.Screens.Reports.ProductsReport.resources
+F:\iti\Projects\EF-Project\Warehouse-Management-System\obj\Debug\Warehouse_Management_System.Screens.Reports.MainReportsForm.resources
+F:\iti\Projects\EF-Project\Warehouse-Management-System\obj\Debug\Warehouse_Management_System.Screens.Mangers.MangersFrom.resources

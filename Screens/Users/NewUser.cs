@@ -19,6 +19,7 @@ namespace Warehouse_Management_System.Screens.Users
         public NewUser()
         {
             InitializeComponent();
+           
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -35,16 +36,23 @@ namespace Warehouse_Management_System.Screens.Users
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //button to add new user
-               User newUser = new User() {UserName=txtUserName.Text, Password=txtPassword.Text };
 
-               wrs.Users.Add(newUser);
-               wrs.SaveChanges();
-            
-            string UsersImages = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.Parent.FullName + "\\Warehouse Management System\\Images\\Users Images\\"+newUser.UserID+".jpg";
-            File.Copy(imgPath, UsersImages);
-            newUser.Image = UsersImages;
-            wrs.SaveChanges();
+            if(txtPassword.Text != txtCP.Text ) {
+                MessageBox.Show("password does not match");
+            }
+            else
+            { //button to add new user
+                User newUser = new User() { UserName = txtUserName.Text, Password = txtPassword.Text };
+
+                wrs.Users.Add(newUser);
+                wrs.SaveChanges();
+
+                string UsersImages = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.Parent.FullName + "\\Warehouse Management System\\Images\\Users Images\\" + newUser.UserID + ".jpg";
+                File.Copy(imgPath, UsersImages);
+                newUser.Image = UsersImages;
+                wrs.SaveChanges();
+            }
+           
 
         }
     }

@@ -28,7 +28,9 @@ namespace Warehouse_Management_System.DataBase
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Dismissal_Permission> Dismissal_Permissions { get; set; }
         public virtual DbSet<Dismissal_Prd> Dismissal_Prd { get; set; }
+        public virtual DbSet<Employee> Employees { get; set; }
         public virtual DbSet<Manger> Mangers { get; set; }
+        public virtual DbSet<Product_Transfer_Log> Product_Transfer_Log { get; set; }
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<Supplier> Suppliers { get; set; }
         public virtual DbSet<Supply_Permission> Supply_Permissions { get; set; }

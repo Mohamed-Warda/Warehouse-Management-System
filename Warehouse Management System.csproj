@@ -64,6 +64,9 @@
     <Compile Include="DataBase\Dismissal_Prd.cs">
       <DependentUpon>ModelEF.tt</DependentUpon>
     </Compile>
+    <Compile Include="DataBase\Employee.cs">
+      <DependentUpon>ModelEF.tt</DependentUpon>
+    </Compile>
     <Compile Include="DataBase\Manger.cs">
       <DependentUpon>ModelEF.tt</DependentUpon>
     </Compile>
@@ -83,6 +86,9 @@
       <DependentUpon>ModelEF.edmx</DependentUpon>
     </Compile>
     <Compile Include="DataBase\Product.cs">
+      <DependentUpon>ModelEF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\Product_Transfer_Log.cs">
       <DependentUpon>ModelEF.tt</DependentUpon>
     </Compile>
     <Compile Include="DataBase\Supplier.cs">
@@ -126,11 +132,23 @@
     <Compile Include="Screens\DismissalPermission\DismissalPermissionForm.Designer.cs">
       <DependentUpon>DismissalPermissionForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Mangers\Add_Manger.cs">
+    <Compile Include="Screens\DismissalPermission\UpdateDismissalForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Mangers\Add_Manger.Designer.cs">
-      <DependentUpon>Add_Manger.cs</DependentUpon>
+    <Compile Include="Screens\DismissalPermission\UpdateDismissalForm.Designer.cs">
+      <DependentUpon>UpdateDismissalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Employees\EmployeesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Employees\EmployeesForm.Designer.cs">
+      <DependentUpon>EmployeesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Mangers\MangersFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Mangers\MangersFrom.Designer.cs">
+      <DependentUpon>MangersFrom.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\Products\AddNewPrd.cs">
       <SubType>Form</SubType>
@@ -149,6 +167,30 @@
     </Compile>
     <Compile Include="Screens\Products\TransferProdectForm.Designer.cs">
       <DependentUpon>TransferProdectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Reports\MainReportsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Reports\MainReportsForm.Designer.cs">
+      <DependentUpon>MainReportsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Reports\ProductsReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Reports\ProductsReport.Designer.cs">
+      <DependentUpon>ProductsReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Reports\TransferredProductsReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Reports\TransferredProductsReport.Designer.cs">
+      <DependentUpon>TransferredProductsReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Reports\WarhouseReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Reports\WarhouseReport.Designer.cs">
+      <DependentUpon>WarhouseReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\SupplyPermission\SupplyPermission.cs">
       <SubType>Form</SubType>
@@ -214,8 +256,14 @@
     <EmbeddedResource Include="Screens\DismissalPermission\DismissalPermissionForm.resx">
       <DependentUpon>DismissalPermissionForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Mangers\Add_Manger.resx">
-      <DependentUpon>Add_Manger.cs</DependentUpon>
+    <EmbeddedResource Include="Screens\DismissalPermission\UpdateDismissalForm.resx">
+      <DependentUpon>UpdateDismissalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Employees\EmployeesForm.resx">
+      <DependentUpon>EmployeesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Mangers\MangersFrom.resx">
+      <DependentUpon>MangersFrom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Products\AddNewPrd.resx">
       <DependentUpon>AddNewPrd.cs</DependentUpon>
@@ -225,6 +273,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Products\TransferProdectForm.resx">
       <DependentUpon>TransferProdectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Reports\MainReportsForm.resx">
+      <DependentUpon>MainReportsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Reports\ProductsReport.resx">
+      <DependentUpon>ProductsReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Reports\TransferredProductsReport.resx">
+      <DependentUpon>TransferredProductsReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Reports\WarhouseReport.resx">
+      <DependentUpon>WarhouseReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\SupplyPermission\SupplyPermission.resx">
       <DependentUpon>SupplyPermission.cs</DependentUpon>
@@ -282,6 +342,8 @@
     <None Include="Images\Add Button.png" />
     <None Include="Images\Add_Icon.png" />
     <None Include="Images\delete.png" />
+    <None Include="Images\customer.png" />
+    <None Include="Images\employee-icon-png-17.jpg" />
     <Content Include="DataBase\ModelEF.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModelEF.edmx</DependentUpon>
@@ -292,8 +354,6 @@
       <DependentUpon>ModelEF.edmx</DependentUpon>
       <LastGenOutput>ModelEF.cs</LastGenOutput>
     </Content>
-    <None Include="Images\customer.png" />
-    <None Include="Images\employee-icon-png-17.jpg" />
     <Content Include="Images\Login.png" />
   </ItemGroup>
   <ItemGroup>

@@ -17,9 +17,9 @@ namespace Warehouse_Management_System.DataBase
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Product()
         {
-            this.SupplyPrm_Prds = new HashSet<SupplyPrm_Prds>();
             this.Dismissal_Prd = new HashSet<Dismissal_Prd>();
-            this.Dismissal_Prd1 = new HashSet<Dismissal_Prd>();
+            this.Product_Transfer_Log = new HashSet<Product_Transfer_Log>();
+            this.SupplyPrm_Prds = new HashSet<SupplyPrm_Prds>();
         }
     
         public int Prd_Id { get; set; }
@@ -35,11 +35,11 @@ namespace Warehouse_Management_System.DataBase
         public Nullable<System.DateTime> Prd_ShippingDate { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SupplyPrm_Prds> SupplyPrm_Prds { get; set; }
-        public virtual Warhous Warhous { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Dismissal_Prd> Dismissal_Prd { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Dismissal_Prd> Dismissal_Prd1 { get; set; }
+        public virtual ICollection<Product_Transfer_Log> Product_Transfer_Log { get; set; }
+        public virtual Warhous Warhous { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SupplyPrm_Prds> SupplyPrm_Prds { get; set; }
     }
 }

@@ -11,8 +11,10 @@ using System.Windows.Forms;
 using Warehouse_Management_System.DataBase;
 using Warehouse_Management_System.Screens.Customers;
 using Warehouse_Management_System.Screens.DismissalPermission;
+using Warehouse_Management_System.Screens.Employees;
 using Warehouse_Management_System.Screens.Mangers;
 using Warehouse_Management_System.Screens.Products;
+using Warehouse_Management_System.Screens.Reports;
 using Warehouse_Management_System.Screens.Suppliers;
 using Warehouse_Management_System.Screens.Users;
 using Warehouse_Management_System.Screens.Warhouses;
@@ -66,8 +68,7 @@ namespace Warehouse_Management_System
 
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
-            Add_Manger frm = new Add_Manger();
-            frm.Show();
+           
         }
 
         private void addNewProductsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -148,6 +149,47 @@ namespace Warehouse_Management_System
         private void button4_Click(object sender, EventArgs e)
         {
             DismissalPermissionForm frm = new DismissalPermissionForm();
+            frm.Show();
+        }
+
+        private void changeProductLocationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TransferProdectForm frm = new TransferProdectForm();
+            frm.Show(); 
+        }
+
+        private void createDismissalPermissionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DismissalPermissionForm frm = new DismissalPermissionForm();
+            frm.Show();
+        }
+
+        private void updateDismissalPermissionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UpdateDismissalForm frm = new UpdateDismissalForm();
+            frm.Show();
+        }
+
+        private void mangeProductsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProductsList frm= new ProductsList();   
+            frm.Show();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            MainReportsForm frm = new MainReportsForm();
+            frm.Show();
+        }
+
+        private void btnMng_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            EmployeesForm frm = new EmployeesForm ();   
             frm.Show();
         }
     }

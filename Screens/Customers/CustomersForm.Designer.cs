@@ -152,7 +152,7 @@
             this.groupBox2.Size = new System.Drawing.Size(659, 245);
             this.groupBox2.TabIndex = 44;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Add New Supplier";
+            this.groupBox2.Text = "Add New Customer";
             // 
             // txtAddEmail
             // 
@@ -315,7 +315,7 @@
             this.groupBox1.Size = new System.Drawing.Size(654, 245);
             this.groupBox1.TabIndex = 43;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Update Supplier";
+            this.groupBox1.Text = "Update Customer";
             // 
             // txtNewEmail
             // 

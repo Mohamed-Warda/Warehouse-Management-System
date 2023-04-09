@@ -50,6 +50,9 @@
             this.supplyPermissionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updatePermissionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createPermissionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dismissalPermissionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createDismissalPermissionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateDismissalPermissionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -81,7 +84,8 @@
             this.suppliersToolStripMenuItem,
             this.warhousesToolStripMenuItem,
             this.toolStripMenuItem1,
-            this.supplyPermissionsToolStripMenuItem});
+            this.supplyPermissionsToolStripMenuItem,
+            this.dismissalPermissionToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 5, 0, 10);
@@ -159,12 +163,14 @@
             this.mangeProductsToolStripMenuItem.Name = "mangeProductsToolStripMenuItem";
             this.mangeProductsToolStripMenuItem.Size = new System.Drawing.Size(246, 28);
             this.mangeProductsToolStripMenuItem.Text = "Mange Products";
+            this.mangeProductsToolStripMenuItem.Click += new System.EventHandler(this.mangeProductsToolStripMenuItem_Click);
             // 
             // changeProductLocationToolStripMenuItem
             // 
             this.changeProductLocationToolStripMenuItem.Name = "changeProductLocationToolStripMenuItem";
             this.changeProductLocationToolStripMenuItem.Size = new System.Drawing.Size(246, 28);
             this.changeProductLocationToolStripMenuItem.Text = "Transfer Products";
+            this.changeProductLocationToolStripMenuItem.Click += new System.EventHandler(this.changeProductLocationToolStripMenuItem_Click);
             // 
             // customersToolStripMenuItem
             // 
@@ -260,6 +266,32 @@
             this.createPermissionToolStripMenuItem.Size = new System.Drawing.Size(243, 26);
             this.createPermissionToolStripMenuItem.Text = "Create Permission";
             this.createPermissionToolStripMenuItem.Click += new System.EventHandler(this.createPermissionToolStripMenuItem_Click);
+            // 
+            // dismissalPermissionToolStripMenuItem
+            // 
+            this.dismissalPermissionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.createDismissalPermissionToolStripMenuItem,
+            this.updateDismissalPermissionToolStripMenuItem});
+            this.dismissalPermissionToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.dismissalPermissionToolStripMenuItem.Name = "dismissalPermissionToolStripMenuItem";
+            this.dismissalPermissionToolStripMenuItem.Size = new System.Drawing.Size(198, 27);
+            this.dismissalPermissionToolStripMenuItem.Text = "Dismissal Permission";
+            // 
+            // createDismissalPermissionToolStripMenuItem
+            // 
+            this.createDismissalPermissionToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.createDismissalPermissionToolStripMenuItem.Name = "createDismissalPermissionToolStripMenuItem";
+            this.createDismissalPermissionToolStripMenuItem.Size = new System.Drawing.Size(327, 26);
+            this.createDismissalPermissionToolStripMenuItem.Text = "Create Dismissal Permission";
+            this.createDismissalPermissionToolStripMenuItem.Click += new System.EventHandler(this.createDismissalPermissionToolStripMenuItem_Click);
+            // 
+            // updateDismissalPermissionToolStripMenuItem
+            // 
+            this.updateDismissalPermissionToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.updateDismissalPermissionToolStripMenuItem.Name = "updateDismissalPermissionToolStripMenuItem";
+            this.updateDismissalPermissionToolStripMenuItem.Size = new System.Drawing.Size(327, 26);
+            this.updateDismissalPermissionToolStripMenuItem.Text = "Update Dismissal Permission";
+            this.updateDismissalPermissionToolStripMenuItem.Click += new System.EventHandler(this.updateDismissalPermissionToolStripMenuItem_Click);
             // 
             // label6
             // 
@@ -358,6 +390,7 @@
             this.button4.BackColor = System.Drawing.Color.Transparent;
             this.button4.BackgroundImage = global::Warehouse_Management_System.Properties.Resources.supplyprd;
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button4.Location = new System.Drawing.Point(684, 67);
@@ -372,6 +405,7 @@
             this.button2.BackColor = System.Drawing.Color.Transparent;
             this.button2.BackgroundImage = global::Warehouse_Management_System.Properties.Resources.reports;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button2.Location = new System.Drawing.Point(357, 58);
@@ -379,12 +413,14 @@
             this.button2.Size = new System.Drawing.Size(250, 193);
             this.button2.TabIndex = 16;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // btnMng
             // 
             this.btnMng.BackColor = System.Drawing.Color.Transparent;
             this.btnMng.BackgroundImage = global::Warehouse_Management_System.Properties.Resources.manger;
             this.btnMng.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMng.FlatAppearance.BorderSize = 0;
             this.btnMng.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnMng.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnMng.Location = new System.Drawing.Point(1072, 381);
@@ -392,12 +428,14 @@
             this.btnMng.Size = new System.Drawing.Size(250, 193);
             this.btnMng.TabIndex = 14;
             this.btnMng.UseVisualStyleBackColor = false;
+            this.btnMng.Click += new System.EventHandler(this.btnMng_Click);
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Transparent;
             this.button3.BackgroundImage = global::Warehouse_Management_System.Properties.Resources.customer1;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button3.Location = new System.Drawing.Point(75, 381);
@@ -412,6 +450,7 @@
             this.btnsuppliers.BackColor = System.Drawing.Color.Transparent;
             this.btnsuppliers.BackgroundImage = global::Warehouse_Management_System.Properties.Resources.supplier;
             this.btnsuppliers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnsuppliers.FlatAppearance.BorderSize = 0;
             this.btnsuppliers.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnsuppliers.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnsuppliers.Location = new System.Drawing.Point(714, 381);
@@ -426,6 +465,7 @@
             this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.BackgroundImage = global::Warehouse_Management_System.Properties.Resources.warhouse;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button1.Location = new System.Drawing.Point(75, 67);
@@ -440,6 +480,7 @@
             this.btnSP.BackColor = System.Drawing.Color.Transparent;
             this.btnSP.BackgroundImage = global::Warehouse_Management_System.Properties.Resources.supply;
             this.btnSP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSP.FlatAppearance.BorderSize = 0;
             this.btnSP.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSP.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnSP.Location = new System.Drawing.Point(1071, 49);
@@ -467,6 +508,7 @@
             this.button5.BackColor = System.Drawing.Color.Transparent;
             this.button5.BackgroundImage = global::Warehouse_Management_System.Properties.Resources.employee_icon_png_17;
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button5.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button5.Location = new System.Drawing.Point(406, 381);
@@ -474,6 +516,7 @@
             this.button5.Size = new System.Drawing.Size(250, 193);
             this.button5.TabIndex = 20;
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // MainForm
             // 
@@ -549,5 +592,8 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.ToolStripMenuItem dismissalPermissionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem createDismissalPermissionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateDismissalPermissionToolStripMenuItem;
     }
 }

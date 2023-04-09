@@ -4,28 +4,33 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="0f7829a80f184b56ab41c640c0e1e1ae" Name="Diagram1">
-        <EntityTypeShape EntityType="WarehousesModel.Customer" Width="1.5" PointX="7.75" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="WarehousesModel.Dismissal_Permission" Width="1.5" PointX="10" PointY="5.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="WarehousesModel.Dismissal_Prd" Width="1.5" PointX="12.25" PointY="5.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="WarehousesModel.Manger" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="WarehousesModel.Product" Width="1.5" PointX="5.25" PointY="6.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="WarehousesModel.Supplier" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="WarehousesModel.Supply_Permission" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="WarehousesModel.SupplyPrm_Prds" Width="1.5" PointX="7.5" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="WarehousesModel.User" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="WarehousesModel.Warhous" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+      <Diagram DiagramId="0fcf71b9bd9f4ec5b5d9a90bcf89feca" Name="Diagram1">
+        <EntityTypeShape EntityType="WarehousesModel.Customer" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarehousesModel.Dismissal_Permission" Width="1.5" PointX="5.25" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarehousesModel.Dismissal_Prd" Width="1.5" PointX="10.5" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarehousesModel.Employee" Width="1.5" PointX="5.25" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarehousesModel.Manger" Width="1.5" PointX="0.75" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarehousesModel.Product_Transfer_Log" Width="1.5" PointX="7.5" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarehousesModel.Product" Width="1.5" PointX="5.25" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarehousesModel.Supplier" Width="1.5" PointX="6" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarehousesModel.Supply_Permission" Width="1.5" PointX="8.25" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarehousesModel.SupplyPrm_Prds" Width="1.5" PointX="7.5" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarehousesModel.User" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarehousesModel.Warhous" Width="1.5" PointX="3" PointY="8.5" IsExpanded="true" />
         <AssociationConnector Association="WarehousesModel.FK_Dismissal_Permission_Customers" ManuallyRouted="false" />
-        <AssociationConnector Association="WarehousesModel.FK_Dismissal_Prd_Dismissal_Permission" ManuallyRouted="false" />
+        <AssociationConnector Association="WarehousesModel.FK_Dismissal_Permission_Warhouses" ManuallyRouted="false" />
+        <AssociationConnector Association="WarehousesModel.FK_Dismissal_Prd_Dismissal_Permission1" ManuallyRouted="false" />
+        <AssociationConnector Association="WarehousesModel.FK_Dismissal_Prd_Products1" ManuallyRouted="false" />
+        <AssociationConnector Association="WarehousesModel.FK_Employee_Warhouses" ManuallyRouted="false" />
         <AssociationConnector Association="WarehousesModel.FK_Warhouses_Mangers" ManuallyRouted="false" />
+        <AssociationConnector Association="WarehousesModel.FK_Product_Transfer_Log_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="WarehousesModel.FK_Product_Transfer_Log_Warhouses" ManuallyRouted="false" />
+        <AssociationConnector Association="WarehousesModel.FK_Product_Transfer_Log_Warhouses1" ManuallyRouted="false" />
+        <AssociationConnector Association="WarehousesModel.FK_Products_Warhouses" ManuallyRouted="false" />
         <AssociationConnector Association="WarehousesModel.FK_SupplyPrm_Prds_Products" ManuallyRouted="false" />
         <AssociationConnector Association="WarehousesModel.FK_Supply_Permissions_Suppliers" ManuallyRouted="false" />
         <AssociationConnector Association="WarehousesModel.FK_Supply_Permissions_Warhouses" ManuallyRouted="false" />
         <AssociationConnector Association="WarehousesModel.FK_SupplyPrm_Prds_Supply_Permissions" ManuallyRouted="false" />
-        <AssociationConnector Association="WarehousesModel.FK_Products_Warhouses" />
-        <AssociationConnector Association="WarehousesModel.FK_Dismissal_Permission_Warhouses" />
-        <AssociationConnector Association="WarehousesModel.FK_Dismissal_Prd_Products" />
-        <AssociationConnector Association="WarehousesModel.FK_Dismissal_Prd_Products1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

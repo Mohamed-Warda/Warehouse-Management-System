@@ -20,6 +20,5 @@ namespace Warehouse_Management_System.DataBase
     
         public virtual Dismissal_Permission Dismissal_Permission { get; set; }
         public virtual Product Product { get; set; }
-        public virtual Product Product1 { get; set; }
     }
 }

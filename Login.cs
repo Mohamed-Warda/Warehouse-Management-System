@@ -19,6 +19,9 @@ namespace Warehouse_Management_System
         public Login()
         {
             InitializeComponent();
+            txtPassword.Text = "admin";
+            txtUserName.Text = "admin";
+
         }
 
         private void button1_Click(object sender, EventArgs e)

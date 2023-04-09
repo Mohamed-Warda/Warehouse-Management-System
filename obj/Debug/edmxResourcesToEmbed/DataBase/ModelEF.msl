@@ -32,6 +32,19 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="WarehousesModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Warhouse" ColumnName="Warhouse" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Mangers">
       <EntityTypeMapping TypeName="WarehousesModel.Manger">
         <MappingFragment StoreEntitySet="Mangers">
@@ -43,10 +56,22 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Product_Transfer_Log">
+      <EntityTypeMapping TypeName="WarehousesModel.Product_Transfer_Log">
+        <MappingFragment StoreEntitySet="Product_Transfer_Log">
+          <ScalarProperty Name="Tr_Id" ColumnName="Tr_Id" />
+          <ScalarProperty Name="FromWarhouse" ColumnName="FromWarhouse" />
+          <ScalarProperty Name="ToWarhouse" ColumnName="ToWarhouse" />
+          <ScalarProperty Name="Tr_Prd" ColumnName="Tr_Prd" />
+          <ScalarProperty Name="Tr_Quantity" ColumnName="Tr_Quantity" />
+          <ScalarProperty Name="Tr_Date" ColumnName="Tr_Date" />
+          <ScalarProperty Name="Tr_Remaining_Quantity" ColumnName="Tr_Remaining Quantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Products">
       <EntityTypeMapping TypeName="WarehousesModel.Product">
         <MappingFragment StoreEntitySet="Products">
-          <ScalarProperty Name="Prd_ShippingDate" ColumnName="Prd_ShippingDate" />
           <ScalarProperty Name="Prd_Id" ColumnName="Prd_Id" />
           <ScalarProperty Name="Prd_Code" ColumnName="Prd_Code" />
           <ScalarProperty Name="Prd_Name" ColumnName="Prd_Name" />
@@ -57,6 +82,7 @@
           <ScalarProperty Name="Prd_Image" ColumnName="Prd_Image" />
           <ScalarProperty Name="Prd_Quantity" ColumnName="Prd_Quantity" />
           <ScalarProperty Name="Prd_Warhouse" ColumnName="Prd_Warhouse" />
+          <ScalarProperty Name="Prd_ShippingDate" ColumnName="Prd_ShippingDate" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
