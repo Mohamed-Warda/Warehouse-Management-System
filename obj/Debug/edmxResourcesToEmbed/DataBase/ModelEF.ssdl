@@ -140,18 +140,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Dismissal Permission_Warhouses">
-    <End Role="Warhouses" Type="Self.Warhouses" Multiplicity="0..1" />
-    <End Role="Dismissal Permission" Type="Self.Dismissal Permission" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Warhouses">
-        <PropertyRef Name="Wrh_Id" />
-      </Principal>
-      <Dependent Role="Dismissal Permission">
-        <PropertyRef Name="Dis_Warhouse" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_Dismissal_Prd_Dismissal Permission1">
     <End Role="Dismissal Permission" Type="Self.Dismissal Permission" Multiplicity="1" />
     <End Role="Dismissal_Prd" Type="Self.Dismissal_Prd" Multiplicity="*" />
@@ -161,18 +149,6 @@
       </Principal>
       <Dependent Role="Dismissal_Prd">
         <PropertyRef Name="Diss_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Dismissal_Prd_Products1">
-    <End Role="Products" Type="Self.Products" Multiplicity="1" />
-    <End Role="Dismissal_Prd" Type="Self.Dismissal_Prd" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Products">
-        <PropertyRef Name="Prd_Id" />
-      </Principal>
-      <Dependent Role="Dismissal_Prd">
-        <PropertyRef Name="Diss_Prd" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -260,30 +236,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_SupplyPrm_Prds_Products">
-    <End Role="Products" Type="Self.Products" Multiplicity="1" />
-    <End Role="SupplyPrm_Prds" Type="Self.SupplyPrm_Prds" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Products">
-        <PropertyRef Name="Prd_Id" />
-      </Principal>
-      <Dependent Role="SupplyPrm_Prds">
-        <PropertyRef Name="Sup_Prd" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_SupplyPrm_Prds_Supply Permissions">
-    <End Role="Supply Permissions" Type="Self.Supply Permissions" Multiplicity="1" />
-    <End Role="SupplyPrm_Prds" Type="Self.SupplyPrm_Prds" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Supply Permissions">
-        <PropertyRef Name="Spl_Id" />
-      </Principal>
-      <Dependent Role="SupplyPrm_Prds">
-        <PropertyRef Name="Sup_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_Warhouses_Mangers">
     <End Role="Mangers" Type="Self.Mangers" Multiplicity="0..1" />
     <End Role="Warhouses" Type="Self.Warhouses" Multiplicity="*" />
@@ -313,16 +265,8 @@
       <End Role="Customers" EntitySet="Customers" />
       <End Role="Dismissal Permission" EntitySet="Dismissal Permission" />
     </AssociationSet>
-    <AssociationSet Name="FK_Dismissal Permission_Warhouses" Association="Self.FK_Dismissal Permission_Warhouses">
-      <End Role="Warhouses" EntitySet="Warhouses" />
-      <End Role="Dismissal Permission" EntitySet="Dismissal Permission" />
-    </AssociationSet>
     <AssociationSet Name="FK_Dismissal_Prd_Dismissal Permission1" Association="Self.FK_Dismissal_Prd_Dismissal Permission1">
       <End Role="Dismissal Permission" EntitySet="Dismissal Permission" />
-      <End Role="Dismissal_Prd" EntitySet="Dismissal_Prd" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Dismissal_Prd_Products1" Association="Self.FK_Dismissal_Prd_Products1">
-      <End Role="Products" EntitySet="Products" />
       <End Role="Dismissal_Prd" EntitySet="Dismissal_Prd" />
     </AssociationSet>
     <AssociationSet Name="FK_Employee_Warhouses" Association="Self.FK_Employee_Warhouses">
@@ -352,14 +296,6 @@
     <AssociationSet Name="FK_Supply Permissions_Warhouses" Association="Self.FK_Supply Permissions_Warhouses">
       <End Role="Warhouses" EntitySet="Warhouses" />
       <End Role="Supply Permissions" EntitySet="Supply Permissions" />
-    </AssociationSet>
-    <AssociationSet Name="FK_SupplyPrm_Prds_Products" Association="Self.FK_SupplyPrm_Prds_Products">
-      <End Role="Products" EntitySet="Products" />
-      <End Role="SupplyPrm_Prds" EntitySet="SupplyPrm_Prds" />
-    </AssociationSet>
-    <AssociationSet Name="FK_SupplyPrm_Prds_Supply Permissions" Association="Self.FK_SupplyPrm_Prds_Supply Permissions">
-      <End Role="Supply Permissions" EntitySet="Supply Permissions" />
-      <End Role="SupplyPrm_Prds" EntitySet="SupplyPrm_Prds" />
     </AssociationSet>
     <AssociationSet Name="FK_Warhouses_Mangers" Association="Self.FK_Warhouses_Mangers">
       <End Role="Mangers" EntitySet="Mangers" />

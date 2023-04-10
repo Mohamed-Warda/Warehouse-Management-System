@@ -35,6 +35,8 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cbNew = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.txtAddEmail = new System.Windows.Forms.TextBox();
             this.txtAddadd = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -49,6 +51,8 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnR = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbWrsName = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.txtNewEmail = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtNewAddress = new System.Windows.Forms.TextBox();
@@ -60,10 +64,6 @@
             this.txtNewFax = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtNewPhone = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.cbNew = new System.Windows.Forms.ComboBox();
-            this.cbWrsName = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -158,6 +158,27 @@
             this.groupBox2.TabIndex = 44;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Add New Employee";
+            // 
+            // cbNew
+            // 
+            this.cbNew.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbNew.FormattingEnabled = true;
+            this.cbNew.Location = new System.Drawing.Point(418, 160);
+            this.cbNew.Name = "cbNew";
+            this.cbNew.Size = new System.Drawing.Size(193, 31);
+            this.cbNew.TabIndex = 25;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(300, 161);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(113, 25);
+            this.label13.TabIndex = 23;
+            this.label13.Text = "Warhouse";
             // 
             // txtAddEmail
             // 
@@ -324,6 +345,27 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Update Employee";
             // 
+            // cbWrsName
+            // 
+            this.cbWrsName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbWrsName.FormattingEnabled = true;
+            this.cbWrsName.Location = new System.Drawing.Point(423, 165);
+            this.cbWrsName.Name = "cbWrsName";
+            this.cbWrsName.Size = new System.Drawing.Size(193, 31);
+            this.cbWrsName.TabIndex = 27;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(305, 166);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(113, 25);
+            this.label14.TabIndex = 26;
+            this.label14.Text = "Warhouse";
+            // 
             // txtNewEmail
             // 
             this.txtNewEmail.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -364,6 +406,7 @@
             this.btnupdate.TabIndex = 21;
             this.btnupdate.Text = "Save Changes";
             this.btnupdate.UseVisualStyleBackColor = false;
+            this.btnupdate.Click += new System.EventHandler(this.btnupdate_Click);
             // 
             // txtNewName
             // 
@@ -436,48 +479,6 @@
             this.txtNewPhone.Name = "txtNewPhone";
             this.txtNewPhone.Size = new System.Drawing.Size(188, 28);
             this.txtNewPhone.TabIndex = 16;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(300, 161);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(113, 25);
-            this.label13.TabIndex = 23;
-            this.label13.Text = "Warhouse";
-            // 
-            // cbNew
-            // 
-            this.cbNew.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbNew.FormattingEnabled = true;
-            this.cbNew.Location = new System.Drawing.Point(418, 160);
-            this.cbNew.Name = "cbNew";
-            this.cbNew.Size = new System.Drawing.Size(193, 31);
-            this.cbNew.TabIndex = 25;
-            // 
-            // cbWrsName
-            // 
-            this.cbWrsName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbWrsName.FormattingEnabled = true;
-            this.cbWrsName.Location = new System.Drawing.Point(423, 165);
-            this.cbWrsName.Name = "cbWrsName";
-            this.cbWrsName.Size = new System.Drawing.Size(193, 31);
-            this.cbWrsName.TabIndex = 27;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(305, 166);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(113, 25);
-            this.label14.TabIndex = 26;
-            this.label14.Text = "Warhouse";
             // 
             // EmployeesForm
             // 

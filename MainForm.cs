@@ -184,7 +184,8 @@ namespace Warehouse_Management_System
 
         private void btnMng_Click(object sender, EventArgs e)
         {
-
+            MangersFrom frm = new MangersFrom();
+            frm.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)

@@ -120,5 +120,32 @@ namespace Warehouse_Management_System.Screens.Employees
                 MessageBox.Show("Employee Added");
             };
         }
+
+        private void btnupdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                var wh = wrs.Employees.SingleOrDefault(w => w.Id == id);
+                wh.Address = txtNewAddress.Text;
+                wh.Name = txtNewName.Text;
+                wh.Fax = txtNewFax.Text;
+                wh.Phone = txtNewPhone.Text;
+                wh.Email = txtNewEmail.Text;
+                wh.Warhouse =  int.Parse(cbWrsName.SelectedValue.ToString());
+
+
+
+                wrs.SaveChanges();
+                dataGridView1.DataSource = wrs.Employees.Select(s => new { s.Id, s.Name, s.Phone, s.Fax, s.Email, s.Address, s.Warhous.Wrh_Name, s.Warhouse }).ToList();
+
+                MessageBox.Show("Employee Data Updated");
+            }
+            catch
+            {
+                MessageBox.Show("Please Enter The Data Correctly");
+
+            }
+        }
     }
 }

@@ -118,6 +118,7 @@ namespace Warehouse_Management_System.Screens.Warhouses
                 wh.Wrs_Mng = int.Parse(cbNewMng.SelectedValue.ToString());
 
                 wrs.SaveChanges();
+                dataGridView1.DataSource = wrs.Warhouses.Select(ws => new { ws.Wrh_Id, ws.Wrh_Name, ws.Wrh_Address, ws.Wrs_Fax, ws.Wrs_Phone, ws.Wrs_Mng, ws.Manger.Mng_Name }).ToList();
 
                 MessageBox.Show("Warhouse Data Updated");
             }
